@@ -11,8 +11,6 @@
 #include "hid.h"
 #include "universe.h"
 
-#include "st7735s.h"
-
 static uint32_t blink_interval_ms = BLINK_UNMOUNTED;
 
 void led_task(void);

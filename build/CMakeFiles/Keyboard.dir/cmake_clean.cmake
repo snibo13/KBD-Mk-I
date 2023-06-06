@@ -122,6 +122,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj.d"
   "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj"
   "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj.d"
+  "CMakeFiles/Keyboard.dir/lib/TFT_eSPI/TFT_eSPI.cpp.obj"
+  "CMakeFiles/Keyboard.dir/lib/TFT_eSPI/TFT_eSPI.cpp.obj.d"
   "CMakeFiles/Keyboard.dir/main.cpp.obj"
   "CMakeFiles/Keyboard.dir/main.cpp.obj.d"
   "CMakeFiles/Keyboard.dir/usb_descriptors.c.obj"

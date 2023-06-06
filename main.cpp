@@ -11,14 +11,28 @@
 #include "hid.h"
 #include "universe.h"
 
+// #define ARDUINO_ARCH_RP2040
+// #include "macros.h"
+#include "TFT_eSPI.h"
+#include "lv_conf.h"
+#include "lvgl.h"
+
+static const uint16_t screenWidth = 480;
+static const uint16_t screenHeight = 320;
+
+static lv_disp_draw_buf_t draw_buf;
+static lv_color_t buf[screenWidth * screenHeight / 10];
+
 static uint32_t blink_interval_ms = BLINK_UNMOUNTED;
 
 void led_task(void);
+void init_display();
 
 int main(void)
 {
     board_init();
     tusb_init();
+    init_display();
 
     while (1)
     {
@@ -27,6 +41,11 @@ int main(void)
         hid_task();
     }
     return 0;
+}
+
+void init_display()
+{
+    TFT_eSPI tft = TFT_eSPI(screenWidth, screenHeight);
 }
 
 // Device callbacks

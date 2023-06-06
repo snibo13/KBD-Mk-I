@@ -1639,6 +1639,30 @@ home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
+lib/TFT_eSPI/TFT_eSPI.obj: lib/TFT_eSPI/TFT_eSPI.cpp.obj
+.PHONY : lib/TFT_eSPI/TFT_eSPI.obj
+
+# target to build an object file
+lib/TFT_eSPI/TFT_eSPI.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/lib/TFT_eSPI/TFT_eSPI.cpp.obj
+.PHONY : lib/TFT_eSPI/TFT_eSPI.cpp.obj
+
+lib/TFT_eSPI/TFT_eSPI.i: lib/TFT_eSPI/TFT_eSPI.cpp.i
+.PHONY : lib/TFT_eSPI/TFT_eSPI.i
+
+# target to preprocess a source file
+lib/TFT_eSPI/TFT_eSPI.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/lib/TFT_eSPI/TFT_eSPI.cpp.i
+.PHONY : lib/TFT_eSPI/TFT_eSPI.cpp.i
+
+lib/TFT_eSPI/TFT_eSPI.s: lib/TFT_eSPI/TFT_eSPI.cpp.s
+.PHONY : lib/TFT_eSPI/TFT_eSPI.s
+
+# target to generate assembly for a file
+lib/TFT_eSPI/TFT_eSPI.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/lib/TFT_eSPI/TFT_eSPI.cpp.s
+.PHONY : lib/TFT_eSPI/TFT_eSPI.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -1881,6 +1905,9 @@ help:
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s"
+	@echo "... lib/TFT_eSPI/TFT_eSPI.obj"
+	@echo "... lib/TFT_eSPI/TFT_eSPI.i"
+	@echo "... lib/TFT_eSPI/TFT_eSPI.s"
 	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -72,6 +72,9 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "../"
+  "../lib/lvgl"
+  "../lib/TFT_eSPI"
+  "../lib"
   "/home/sidney/pico/pico-sdk/src/common/pico_stdlib/include"
   "/home/sidney/pico/pico-sdk/src/rp2_common/hardware_gpio/include"
   "/home/sidney/pico/pico-sdk/src/common/pico_base/include"
@@ -176,6 +179,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/sidney/Keyboard/usb_descriptors.c" "CMakeFiles/Keyboard.dir/usb_descriptors.c.obj" "gcc" "CMakeFiles/Keyboard.dir/usb_descriptors.c.obj.d"
   "/home/sidney/Keyboard/hid.cpp" "CMakeFiles/Keyboard.dir/hid.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/hid.cpp.obj.d"
   "/home/sidney/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj.d"
+  "/home/sidney/Keyboard/lib/TFT_eSPI/TFT_eSPI.cpp" "CMakeFiles/Keyboard.dir/lib/TFT_eSPI/TFT_eSPI.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/lib/TFT_eSPI/TFT_eSPI.cpp.obj.d"
   "/home/sidney/Keyboard/main.cpp" "CMakeFiles/Keyboard.dir/main.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/main.cpp.obj.d"
   )
 

@@ -85,6 +85,51 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sidney/Keyboard/build/CMakeFiles /home/sidney/Keyboard/build//CMakeFiles/progress.marks
@@ -141,6 +186,45 @@ ELF2UF2Build: cmake_check_build_system
 ELF2UF2Build/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ELF2UF2Build.dir/build.make CMakeFiles/ELF2UF2Build.dir/build
 .PHONY : ELF2UF2Build/fast
+
+#=============================================================================
+# Target rules for targets named lvgl
+
+# Build rule for target.
+lvgl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lvgl
+.PHONY : lvgl
+
+# fast build rule for target.
+lvgl/fast:
+	$(MAKE) $(MAKESILENT) -f lvgl/CMakeFiles/lvgl.dir/build.make lvgl/CMakeFiles/lvgl.dir/build
+.PHONY : lvgl/fast
+
+#=============================================================================
+# Target rules for targets named lvgl_examples
+
+# Build rule for target.
+lvgl_examples: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lvgl_examples
+.PHONY : lvgl_examples
+
+# fast build rule for target.
+lvgl_examples/fast:
+	$(MAKE) $(MAKESILENT) -f lvgl/CMakeFiles/lvgl_examples.dir/build.make lvgl/CMakeFiles/lvgl_examples.dir/build
+.PHONY : lvgl_examples/fast
+
+#=============================================================================
+# Target rules for targets named lvgl_demos
+
+# Build rule for target.
+lvgl_demos: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lvgl_demos
+.PHONY : lvgl_demos
+
+# fast build rule for target.
+lvgl_demos/fast:
+	$(MAKE) $(MAKESILENT) -f lvgl/CMakeFiles/lvgl_demos.dir/build.make lvgl/CMakeFiles/lvgl_demos.dir/build
+.PHONY : lvgl_demos/fast
 
 #=============================================================================
 # Target rules for targets named bs2_default
@@ -1639,30 +1723,6 @@ home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
-lib/TFT_eSPI/TFT_eSPI.obj: lib/TFT_eSPI/TFT_eSPI.cpp.obj
-.PHONY : lib/TFT_eSPI/TFT_eSPI.obj
-
-# target to build an object file
-lib/TFT_eSPI/TFT_eSPI.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/lib/TFT_eSPI/TFT_eSPI.cpp.obj
-.PHONY : lib/TFT_eSPI/TFT_eSPI.cpp.obj
-
-lib/TFT_eSPI/TFT_eSPI.i: lib/TFT_eSPI/TFT_eSPI.cpp.i
-.PHONY : lib/TFT_eSPI/TFT_eSPI.i
-
-# target to preprocess a source file
-lib/TFT_eSPI/TFT_eSPI.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/lib/TFT_eSPI/TFT_eSPI.cpp.i
-.PHONY : lib/TFT_eSPI/TFT_eSPI.cpp.i
-
-lib/TFT_eSPI/TFT_eSPI.s: lib/TFT_eSPI/TFT_eSPI.cpp.s
-.PHONY : lib/TFT_eSPI/TFT_eSPI.s
-
-# target to generate assembly for a file
-lib/TFT_eSPI/TFT_eSPI.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/lib/TFT_eSPI/TFT_eSPI.cpp.s
-.PHONY : lib/TFT_eSPI/TFT_eSPI.cpp.s
-
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -1718,6 +1778,10 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... ELF2UF2Build"
 	@echo "... PioasmBuild"
@@ -1726,6 +1790,9 @@ help:
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
 	@echo "... Keyboard"
 	@echo "... bs2_default"
+	@echo "... lvgl"
+	@echo "... lvgl_demos"
+	@echo "... lvgl_examples"
 	@echo "... hid.obj"
 	@echo "... hid.i"
 	@echo "... hid.s"
@@ -1905,9 +1972,6 @@ help:
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s"
-	@echo "... lib/TFT_eSPI/TFT_eSPI.obj"
-	@echo "... lib/TFT_eSPI/TFT_eSPI.i"
-	@echo "... lib/TFT_eSPI/TFT_eSPI.s"
 	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"

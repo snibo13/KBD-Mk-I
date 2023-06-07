@@ -56,6 +56,8 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
   "LIB_PICO_UTIL=1"
   "LIB_TINYUSB_BOARD=1"
   "LIB_TINYUSB_DEVICE=1"
+  "LV_CONF_INCLUDE_SIMPLE"
+  "LV_LVGL_H_INCLUDE_SIMPLE"
   "PICO_BOARD=\"pico\""
   "PICO_BUILD=1"
   "PICO_CMAKE_BUILD_TYPE=\"Debug\""
@@ -72,9 +74,13 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "../"
-  "../lib/lvgl"
-  "../lib/TFT_eSPI"
-  "../lib"
+  "../lvgl/src/lv_core"
+  "../lvgl/src/lv_hal"
+  "../lvgl/src/lv_objx"
+  "../lvgl/src/lv_font"
+  "../lvgl/src/lv_misc"
+  "../lvgl/src/lv_themes"
+  "../lvgl/src/lv_draw"
   "/home/sidney/pico/pico-sdk/src/common/pico_stdlib/include"
   "/home/sidney/pico/pico-sdk/src/rp2_common/hardware_gpio/include"
   "/home/sidney/pico/pico-sdk/src/common/pico_base/include"
@@ -118,6 +124,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/sidney/pico/pico-sdk/lib/tinyusb/hw"
   "/home/sidney/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/include"
   "/home/sidney/pico/pico-sdk/src/rp2_common/hardware_spi/include"
+  "../lvgl"
   )
 
 # The set of dependency files which are needed:
@@ -179,12 +186,12 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/sidney/Keyboard/usb_descriptors.c" "CMakeFiles/Keyboard.dir/usb_descriptors.c.obj" "gcc" "CMakeFiles/Keyboard.dir/usb_descriptors.c.obj.d"
   "/home/sidney/Keyboard/hid.cpp" "CMakeFiles/Keyboard.dir/hid.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/hid.cpp.obj.d"
   "/home/sidney/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj.d"
-  "/home/sidney/Keyboard/lib/TFT_eSPI/TFT_eSPI.cpp" "CMakeFiles/Keyboard.dir/lib/TFT_eSPI/TFT_eSPI.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/lib/TFT_eSPI/TFT_eSPI.cpp.obj.d"
   "/home/sidney/Keyboard/main.cpp" "CMakeFiles/Keyboard.dir/main.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/sidney/Keyboard/build/lvgl/CMakeFiles/lvgl.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

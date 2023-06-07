@@ -74,13 +74,6 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "../"
-  "../lvgl/src/lv_core"
-  "../lvgl/src/lv_hal"
-  "../lvgl/src/lv_objx"
-  "../lvgl/src/lv_font"
-  "../lvgl/src/lv_misc"
-  "../lvgl/src/lv_themes"
-  "../lvgl/src/lv_draw"
   "/home/sidney/pico/pico-sdk/src/common/pico_stdlib/include"
   "/home/sidney/pico/pico-sdk/src/rp2_common/hardware_gpio/include"
   "/home/sidney/pico/pico-sdk/src/common/pico_base/include"
@@ -184,6 +177,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj.d"
   "/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj.d"
   "/home/sidney/Keyboard/usb_descriptors.c" "CMakeFiles/Keyboard.dir/usb_descriptors.c.obj" "gcc" "CMakeFiles/Keyboard.dir/usb_descriptors.c.obj.d"
+  "/home/sidney/Keyboard/disp.cpp" "CMakeFiles/Keyboard.dir/disp.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/disp.cpp.obj.d"
   "/home/sidney/Keyboard/hid.cpp" "CMakeFiles/Keyboard.dir/hid.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/hid.cpp.obj.d"
   "/home/sidney/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj.d"
   "/home/sidney/Keyboard/main.cpp" "CMakeFiles/Keyboard.dir/main.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/main.cpp.obj.d"

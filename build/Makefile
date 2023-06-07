@@ -291,6 +291,30 @@ cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build.make pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build
 .PHONY : cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast
 
+disp.obj: disp.cpp.obj
+.PHONY : disp.obj
+
+# target to build an object file
+disp.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/disp.cpp.obj
+.PHONY : disp.cpp.obj
+
+disp.i: disp.cpp.i
+.PHONY : disp.i
+
+# target to preprocess a source file
+disp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/disp.cpp.i
+.PHONY : disp.cpp.i
+
+disp.s: disp.cpp.s
+.PHONY : disp.s
+
+# target to generate assembly for a file
+disp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/disp.cpp.s
+.PHONY : disp.cpp.s
+
 hid.obj: hid.cpp.obj
 .PHONY : hid.obj
 
@@ -1793,6 +1817,9 @@ help:
 	@echo "... lvgl"
 	@echo "... lvgl_demos"
 	@echo "... lvgl_examples"
+	@echo "... disp.obj"
+	@echo "... disp.i"
+	@echo "... disp.s"
 	@echo "... hid.obj"
 	@echo "... hid.i"
 	@echo "... hid.s"

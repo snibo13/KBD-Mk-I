@@ -12,43 +12,13 @@
 #include "hid.h"
 #include "universe.h"
 
-// #define ARDUINO_ARCH_RP2040
-// #include "macros.h"
 #include "lv_conf.h"
 #include "lvgl.h"
-// #include "lvgl/src/lv_conf_internal.h"
-// #include "lvgl/src/core/lv_obj.h"
+#include "disp.h"
 
 static uint32_t blink_interval_ms = BLINK_UNMOUNTED;
 
 void led_task(void);
-
-// LCD pin definitions
-#define PIN_LCD_CS 5
-#define PIN_LCD_RST 6
-#define PIN_LCD_DC 7
-#define PIN_LCD_SCK 8
-#define PIN_LCD_MOSI 10
-
-// LCD commands
-#define CMD_SWRESET 0x01
-#define CMD_SLPOUT 0x11
-#define CMD_DISPON 0x29
-#define CMD_CASET 0x2A
-#define CMD_RASET 0x2B
-#define CMD_RAMWR 0x2C
-
-// LCD dimensions
-#define LCD_WIDTH 128
-#define LCD_HEIGHT 160
-
-// Function prototypes
-void lcd_init();
-void lcd_command(uint8_t cmd);
-void lcd_data(uint8_t data);
-void lcd_set_address(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1);
-void lcd_set_pixel(uint8_t x, uint8_t y, uint16_t color);
-void lcd_fill_screen(uint16_t color);
 
 int main(void)
 {
@@ -77,23 +47,37 @@ int main(void)
     // Initialize the LCD
     lcd_init();
 
-    // Clear the screen
-    lcd_fill_screen(0xFFFF);
-
-    // Draw some pixels
-    lcd_set_pixel(10, 10, 0x001F);
-    lcd_set_pixel(20, 20, 0xF800);
-    lcd_set_pixel(30, 30, 0x07E0);
-    lcd_set_pixel(40, 40, 0xFFE0);
-
+    // Initialize LVGL
     lv_init();
+
+    // Create a display driver for the LCD
+    lv_disp_drv_t disp_drv;
+    lv_disp_drv_init(&disp_drv);
+    disp_drv.flush_cb = lcd_flush;
+    lv_disp_drv_register(&disp_drv);
+
+    // // Create a screen and other lvgl objects
+    // lv_obj_t *screen = lv_obj_create(NULL);
+    // lv_scr_load(screen);
+
+    // Create an LVGL screen
+    lv_obj_t *screen = lv_scr_act();
+
+    // Create an LVGL object (e.g., button)
+    lv_obj_t *button = lv_btn_create(screen);
+    lv_obj_set_pos(button, 50, 50);
+    lv_obj_set_size(button, 100, 50);
+
+    // Create an LVGL object (e.g., label)
+    lv_obj_t *label = lv_label_create(button);
+    lv_label_set_text(label, "Hello, LVGL!");
 
     while (1)
     {
         tud_task();
         // led_task();
         hid_task();
-        tight_loop_contents();
+        lv_task_handler();
     }
     return 0;
 }
@@ -118,63 +102,6 @@ void tud_suspend_cb(bool remote_wakeup_en)
 void tud_resume_cb(void)
 {
     blink_interval_ms = BLINK_MOUNTED;
-}
-
-void lcd_init()
-{
-    // Send initialization commands to the LCD
-    lcd_command(CMD_SWRESET); // Software reset
-    sleep_ms(150);
-    lcd_command(CMD_SLPOUT); // Sleep out
-    sleep_ms(150);
-    lcd_command(CMD_DISPON); // Display on
-    sleep_ms(150);
-}
-
-void lcd_command(uint8_t cmd)
-{
-    gpio_put(PIN_LCD_DC, 0); // Set DC low for command mode
-    spi_write_blocking(spi0, &cmd, 1);
-}
-
-void lcd_data(uint8_t data)
-{
-    gpio_put(PIN_LCD_DC, 1); // Set DC high for data mode
-    spi_write_blocking(spi0, &data, 1);
-}
-
-void lcd_set_address(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1)
-{
-    lcd_command(CMD_CASET); // Column address set
-    lcd_data(0x00);
-    lcd_data(x0);
-    lcd_data(0x00);
-    lcd_data(x1);
-
-    lcd_command(CMD_RASET); // Row address set
-    lcd_data(0x00);
-    lcd_data(y0);
-    lcd_data(0x00);
-    lcd_data(y1);
-
-    lcd_command(CMD_RAMWR); // Memory write
-}
-
-void lcd_set_pixel(uint8_t x, uint8_t y, uint16_t color)
-{
-    lcd_set_address(x, y, x, y);
-    lcd_data(color >> 8);
-    lcd_data(color);
-}
-
-void lcd_fill_screen(uint16_t color)
-{
-    lcd_set_address(0, 0, LCD_WIDTH - 1, LCD_HEIGHT - 1);
-    for (int i = 0; i < (LCD_WIDTH * LCD_HEIGHT); i++)
-    {
-        lcd_data(color >> 8);
-        lcd_data(color);
-    }
 }
 
 // Debugging

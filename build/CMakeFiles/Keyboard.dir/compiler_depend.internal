@@ -244,7 +244,7 @@ CMakeFiles/Keyboard.dir/disp.cpp.obj
  /home/sidney/Keyboard/lvgl/src/lvgl.h
  /home/sidney/Keyboard/lvgl/src/extra/widgets/span/lv_span.h
  /home/sidney/Keyboard/lvgl/src/lvgl.h
- /home/sidney/pico/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h
+ /home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h
  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico.h
  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/types.h
  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/assert.h
@@ -265,15 +265,12 @@ CMakeFiles/Keyboard.dir/disp.cpp.obj
  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h
  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/types.h
  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/error.h
- /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/spi.h
- /home/sidney/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h
- /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h
- /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h
- /home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h
- /home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/board.h
- /home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/ansi_escape.h
- /home/sidney/pico/pico-sdk/lib/tinyusb/src/tusb.h
- /home/sidney/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h
+ /usr/include/newlib/c++/10.3.1/stdlib.h
+ /usr/include/newlib/c++/10.3.1/cstdlib
+ /usr/include/newlib/stdlib.h
+ /usr/include/newlib/machine/stdlib.h
+ /usr/include/newlib/alloca.h
+ /usr/include/newlib/c++/10.3.1/bits/std_abs.h
  /usr/include/newlib/stdio.h
  /usr/include/newlib/sys/types.h
  /usr/include/newlib/sys/_stdint.h
@@ -288,6 +285,34 @@ CMakeFiles/Keyboard.dir/disp.cpp.obj
  /usr/include/newlib/sys/sched.h
  /usr/include/newlib/machine/types.h
  /usr/include/newlib/sys/stdio.h
+ /home/sidney/pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h
+ /home/sidney/pico/pico-sdk/src/common/pico_time/include/pico/time.h
+ /home/sidney/pico/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h
+ /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h
+ /home/sidney/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h
+ /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h
+ /home/sidney/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h
+ /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h
+ /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h
+ /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/padsbank0.h
+ /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h
+ /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/iobank0.h
+ /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_bank0.h
+ /home/sidney/pico/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h
+ /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h
+ /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h
+ /home/sidney/pico/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h
+ /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h
+ /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h
+ /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h
+ /home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h
+ /home/sidney/pico/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h
+ /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/spi.h
+ /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h
+ /home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/board.h
+ /home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/ansi_escape.h
+ /home/sidney/pico/pico-sdk/lib/tinyusb/src/tusb.h
+ /home/sidney/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h
  /home/sidney/pico/pico-sdk/lib/tinyusb/src/tusb_option.h
  /home/sidney/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h
  /home/sidney/Keyboard/tusb_config.h
@@ -300,10 +325,6 @@ CMakeFiles/Keyboard.dir/disp.cpp.obj
  /home/sidney/pico/pico-sdk/lib/tinyusb/src/osal/osal.h
  /home/sidney/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h
  /home/sidney/pico/pico-sdk/lib/tinyusb/src/osal/osal_pico.h
- /home/sidney/pico/pico-sdk/src/common/pico_time/include/pico/time.h
- /home/sidney/pico/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h
- /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h
- /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h
  /home/sidney/pico/pico-sdk/src/common/pico_sync/include/pico/sem.h
  /home/sidney/pico/pico-sdk/src/common/pico_sync/include/pico/lock_core.h
  /home/sidney/pico/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h
@@ -316,6 +337,8 @@ CMakeFiles/Keyboard.dir/disp.cpp.obj
  /home/sidney/pico/pico-sdk/lib/tinyusb/src/device/usbd.h
  /home/sidney/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h
  /home/sidney/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h
+ /home/sidney/Keyboard/registers.h
+ /home/sidney/Keyboard/st7735.h
 
 CMakeFiles/Keyboard.dir/hid.cpp.obj
  /home/sidney/Keyboard/hid.cpp
@@ -2119,6 +2142,45 @@ CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootrom/bo
  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/types.h
  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/error.h
 
+CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj
+ /home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c
+ /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico.h
+ /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/types.h
+ /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/assert.h
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h
+ /usr/include/newlib/assert.h
+ /usr/include/newlib/_ansi.h
+ /usr/include/newlib/newlib.h
+ /usr/include/newlib/_newlib_version.h
+ /usr/include/newlib/sys/config.h
+ /usr/include/newlib/machine/ieeefp.h
+ /usr/include/newlib/sys/features.h
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
+ /home/sidney/Keyboard/build/generated/pico_base/pico/version.h
+ /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/config.h
+ /home/sidney/Keyboard/build/generated/pico_base/pico/config_autogen.h
+ /home/sidney/pico/pico-sdk/src/boards/include/boards/pico.h
+ /home/sidney/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
+ /home/sidney/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
+ /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h
+ /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h
+ /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h
+ /usr/include/newlib/sys/cdefs.h
+ /usr/include/newlib/machine/_default_types.h
+ /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/types.h
+ /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/error.h
+ /home/sidney/pico/pico-sdk/src/common/pico_time/include/pico/time.h
+ /home/sidney/pico/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h
+ /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h
+ /home/sidney/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h
+ /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h
+ /home/sidney/pico/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom.h
+ /home/sidney/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info.h
+ /home/sidney/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/defs.h
+ /home/sidney/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/structure.h
+ /home/sidney/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/code.h
+
 CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
  /home/sidney/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c
  /usr/include/newlib/string.h
@@ -3117,6 +3179,7 @@ CMakeFiles/Keyboard.dir/main.cpp.obj
  /home/sidney/Keyboard/lvgl/src/extra/widgets/span/lv_span.h
  /home/sidney/Keyboard/lvgl/src/lvgl.h
  /home/sidney/Keyboard/disp.h
+ /home/sidney/Keyboard/registers.h
 
 CMakeFiles/Keyboard.dir/usb_descriptors.c.obj
  /home/sidney/Keyboard/usb_descriptors.c

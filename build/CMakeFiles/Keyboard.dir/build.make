@@ -1038,6 +1038,20 @@ CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/hardware_spi/sp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sidney/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c -o CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 
+CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj: CMakeFiles/Keyboard.dir/flags.make
+CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj: /home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c
+CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj: CMakeFiles/Keyboard.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sidney/Keyboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj -MF CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj.d -o CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj -c /home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c
+
+CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c > CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.i
+
+CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c -o CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.s
+
 # Object files for target Keyboard
 Keyboard_OBJECTS = \
 "CMakeFiles/Keyboard.dir/main.cpp.obj" \
@@ -1109,7 +1123,8 @@ Keyboard_OBJECTS = \
 "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj" \
 "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj" \
 "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj" \
-"CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj"
+"CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj" \
+"CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj"
 
 # External object files for target Keyboard
 Keyboard_EXTERNAL_OBJECTS =
@@ -1184,11 +1199,12 @@ Keyboard.elf: CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/src/
 Keyboard.elf: CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 Keyboard.elf: CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
 Keyboard.elf: CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+Keyboard.elf: CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj
 Keyboard.elf: CMakeFiles/Keyboard.dir/build.make
 Keyboard.elf: lib/liblvgl.a
 Keyboard.elf: pico-sdk/src/rp2_common/boot_stage2/bs2_default_padded_checksummed.S
 Keyboard.elf: CMakeFiles/Keyboard.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sidney/Keyboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Linking CXX executable Keyboard.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sidney/Keyboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Linking CXX executable Keyboard.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Keyboard.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/arm-none-eabi-objcopy -Oihex /home/sidney/Keyboard/build/Keyboard.elf Keyboard.hex
 	/usr/bin/arm-none-eabi-objcopy -Obinary /home/sidney/Keyboard/build/Keyboard.elf Keyboard.bin

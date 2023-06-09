@@ -1347,6 +1347,30 @@ home/sidney/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 .PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 
+home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.obj: home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.obj
+
+# target to build an object file
+home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj
+
+home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.i: home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.i
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.i
+
+# target to preprocess a source file
+home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.i
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.i
+
+home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.s: home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.s
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.s
+
+# target to generate assembly for a file
+home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.s
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.s
+
 home/sidney/pico/pico-sdk/src/rp2_common/pico_divider/divider.obj: home/sidney/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 .PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_divider/divider.obj
 
@@ -1949,6 +1973,9 @@ help:
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s"
+	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.obj"
+	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.i"
+	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.s"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_divider/divider.obj"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.obj"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.obj"

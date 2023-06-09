@@ -19,67 +19,52 @@
 static uint32_t blink_interval_ms = BLINK_UNMOUNTED;
 
 void led_task(void);
+void hal_setup(void);
 
 int main(void)
 {
     board_init();
     tusb_init();
 
-    // Initialize SPI interface
-    spi_init(spi0, 500000);
-    gpio_set_function(PIN_LCD_SCK, GPIO_FUNC_SPI);
-    gpio_set_function(PIN_LCD_MOSI, GPIO_FUNC_SPI);
-
-    // Configure LCD pin directions
-    gpio_init(PIN_LCD_CS);
-    gpio_set_dir(PIN_LCD_CS, GPIO_OUT);
-    gpio_init(PIN_LCD_RST);
-    gpio_set_dir(PIN_LCD_RST, GPIO_OUT);
-    gpio_init(PIN_LCD_DC);
-    gpio_set_dir(PIN_LCD_DC, GPIO_OUT);
-
-    // Reset the LCD
-    gpio_put(PIN_LCD_RST, 0);
-    sleep_ms(100);
-    gpio_put(PIN_LCD_RST, 1);
-    sleep_ms(100);
-
     // Initialize the LCD
     lcd_init();
+    hal_setup();
 
     // Initialize LVGL
     lv_init();
 
-    // Create a display driver for the LCD
-    lv_disp_drv_t disp_drv;
-    lv_disp_drv_init(&disp_drv);
-    disp_drv.flush_cb = lcd_flush;
-    lv_disp_drv_register(&disp_drv);
-
-    // // Create a screen and other lvgl objects
-    // lv_obj_t *screen = lv_obj_create(NULL);
-    // lv_scr_load(screen);
-
-    // Create an LVGL screen
-    lv_obj_t *screen = lv_scr_act();
-
-    // Create an LVGL object (e.g., button)
-    lv_obj_t *button = lv_btn_create(screen);
-    lv_obj_set_pos(button, 50, 50);
-    lv_obj_set_size(button, 100, 50);
-
-    // Create an LVGL object (e.g., label)
-    lv_obj_t *label = lv_label_create(button);
-    lv_label_set_text(label, "Hello, LVGL!");
+    lv_obj_set_style_bg_color(lv_scr_act(), lv_color_hex(0xff0000), LV_PART_MAIN);
+    // lcd_fill_screen((uint16_t)0xffffff);
+    // lcd_fill_screen(0);
 
     while (1)
     {
-        tud_task();
+        // tud_task();
         // led_task();
-        hid_task();
+        // hid_task();
         lv_task_handler();
+        // lcd_fill_screen(0);
     }
     return 0;
+}
+
+void hal_setup(void)
+{
+    static lv_disp_draw_buf_t disp_buf;
+    static lv_color_t buf[LCD_WIDTH * LCD_HEIGHT];
+    lv_disp_draw_buf_init(&disp_buf, buf, NULL, LCD_WIDTH * LCD_HEIGHT);
+
+    static lv_disp_drv_t disp_drv;
+    lv_disp_drv_init(&disp_drv);
+    disp_drv.flush_cb = lcd_flush;
+    disp_drv.hor_res = LCD_WIDTH;
+    disp_drv.ver_res = LCD_HEIGHT;
+
+    disp_drv.draw_buf = &disp_buf;
+
+    static lv_disp_t *disp;
+    disp = lv_disp_drv_register(&disp_drv);
+    lv_disp_set_default(disp);
 }
 
 // Device callbacks

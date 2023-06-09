@@ -1,6 +1,5 @@
 #include "hid.h"
 
-// #include "usb.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <pico/stdlib.h>

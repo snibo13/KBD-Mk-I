@@ -14,35 +14,57 @@
 
 #include "lv_conf.h"
 #include "lvgl.h"
-#include "disp.h"
+// #include "lcd.h"
 
 static uint32_t blink_interval_ms = BLINK_UNMOUNTED;
 
 void led_task(void);
 void hal_setup(void);
+void lcd_init();
+void lcd_command(uint8_t cmd);
+
+// LCD pin definitions
+#define PIN_LCD_CS 6
+#define PIN_LCD_RST 4
+#define PIN_LCD_DC 5
+#define PIN_LCD_SCK 2
+#define PIN_LCD_MOSI 3
+
+// LCD commands
+#define CMD_SWRESET 0x01
+#define CMD_SLPOUT 0x11
+#define CMD_DISPON 0x29
+#define CMD_CASET 0x2A
+#define CMD_RASET 0x2B
+#define CMD_RAMWR 0x2C
+
+// LCD dimensions
+#define LCD_WIDTH 128
+#define LCD_HEIGHT 180
 
 int main(void)
 {
     board_init();
     tusb_init();
 
+    board_led_off();
     // Initialize the LCD
     lcd_init();
-    hal_setup();
+    // lcd_setup();
 
     // Initialize LVGL
-    lv_init();
+    // lv_init();
 
-    lv_obj_set_style_bg_color(lv_scr_act(), lv_color_hex(0xff0000), LV_PART_MAIN);
+    // lv_obj_set_style_bg_color(lv_scr_act(), lv_color_hex(0xff0000), LV_PART_MAIN);
     // lcd_fill_screen((uint16_t)0xffffff);
     // lcd_fill_screen(0);
 
     while (1)
     {
-        // tud_task();
-        // led_task();
-        // hid_task();
-        lv_task_handler();
+        tud_task();
+        led_task();
+        hid_task();
+        // lv_task_handler();
         // lcd_fill_screen(0);
     }
     return 0;
@@ -50,21 +72,40 @@ int main(void)
 
 void hal_setup(void)
 {
-    static lv_disp_draw_buf_t disp_buf;
-    static lv_color_t buf[LCD_WIDTH * LCD_HEIGHT];
-    lv_disp_draw_buf_init(&disp_buf, buf, NULL, LCD_WIDTH * LCD_HEIGHT);
+    // static lv_disp_draw_buf_t disp_buf;
+    // static lv_color_t buf[LCD_WIDTH * LCD_HEIGHT];
+    // lv_disp_draw_buf_init(&disp_buf, buf, NULL, LCD_WIDTH * LCD_HEIGHT);
 
-    static lv_disp_drv_t disp_drv;
-    lv_disp_drv_init(&disp_drv);
-    disp_drv.flush_cb = lcd_flush;
-    disp_drv.hor_res = LCD_WIDTH;
-    disp_drv.ver_res = LCD_HEIGHT;
+    // static lv_disp_drv_t disp_drv;
+    // lv_disp_drv_init(&disp_drv);
+    // disp_drv.flush_cb = lcd_flush;
+    // disp_drv.hor_res = LCD_WIDTH;
+    // disp_drv.ver_res = LCD_HEIGHT;
 
-    disp_drv.draw_buf = &disp_buf;
+    // disp_drv.draw_buf = &disp_buf;
 
-    static lv_disp_t *disp;
-    disp = lv_disp_drv_register(&disp_drv);
-    lv_disp_set_default(disp);
+    // static lv_disp_t *disp;
+    // disp = lv_disp_drv_register(&disp_drv);
+    // lv_disp_set_default(disp);
+}
+
+// LCD Stuff
+void lcd_init()
+{
+    lcd_command(CMD_SWRESET);
+    sleep_ms(150);
+    lcd_command(CMD_SLPOUT);
+    sleep_ms(150);
+    lcd_command(CMD_DISPON);
+    sleep_ms(150);
+}
+
+void lcd_command(uint8_t cmd)
+{
+    gpio_put(PIN_LCD_CS, 1);           // Start listening
+    gpio_put(PIN_LCD_DC, 1);           // Enter command mode
+    spi_write_blocking(spi0, &cmd, 1); // Send command
+    gpio_put(PIN_LCD_CS, 0);           // Stop listening
 }
 
 // Device callbacks

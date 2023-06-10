@@ -10,7 +10,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 pico_sdk_init()
 
-add_executable(Keyboard main.cpp  usb_descriptors.c hid.cpp disp.cpp)
+add_executable(Keyboard main.cpp  usb_descriptors.c hid.cpp)
 target_include_directories(Keyboard PRIVATE 
 ${CMAKE_CURRENT_SOURCE_DIR}/ 
 ${CMAKE_CURRENT_SOURCE_DIR}/lvgl/

@@ -79,6 +79,16 @@ void spi_write_byte(uint8_t byte)
 
 void lcd_init()
 {
+    lcd_command(CMD_SWRESET); // Software reset
+    sleep_ms(150);
+    lcd_command(CMD_SLPOUT); // Sleep out
+    sleep_ms(150);
+    lcd_command(CMD_DISPON); // Display on
+    sleep_ms(150);
+}
+
+void lcd_init_()
+{
     lcd_command(ST7735_SWRESET); // Reset
     board_delay(60);
     lcd_command(ST7735_SLPOUT);
@@ -303,16 +313,16 @@ void lcd_setup()
 
 void lcd_command(uint8_t cmd)
 {
-    gpio_put(PIN_LCD_DC, 0); // Set DC low for command mode
     gpio_put(PIN_LCD_CS, 0);
+    gpio_put(PIN_LCD_DC, 0); // Set DC low for command mode
     spi_write_blocking(spi0, &cmd, 1);
     gpio_put(PIN_LCD_CS, 1);
 }
 
 void lcd_data(uint8_t data)
 {
-    gpio_put(PIN_LCD_DC, 1); // Set DC high for data mode
     gpio_put(PIN_LCD_CS, 0);
+    gpio_put(PIN_LCD_DC, 1); // Set DC high for data mode
     spi_write_blocking(spi0, &data, 1);
     gpio_put(PIN_LCD_CS, 1);
 }

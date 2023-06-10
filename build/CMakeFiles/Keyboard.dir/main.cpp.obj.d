@@ -316,5 +316,4 @@ CMakeFiles/Keyboard.dir/main.cpp.obj: /home/sidney/Keyboard/main.cpp \
  /home/sidney/Keyboard/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.h \
  /home/sidney/Keyboard/lvgl/src/lvgl.h \
  /home/sidney/Keyboard/lvgl/src/extra/widgets/span/lv_span.h \
- /home/sidney/Keyboard/lvgl/src/lvgl.h /home/sidney/Keyboard/disp.h \
- /home/sidney/Keyboard/registers.h
+ /home/sidney/Keyboard/lvgl/src/lvgl.h

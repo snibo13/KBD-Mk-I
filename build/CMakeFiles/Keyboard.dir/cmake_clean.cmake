@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Keyboard.dir/disp.cpp.obj"
-  "CMakeFiles/Keyboard.dir/disp.cpp.obj.d"
   "CMakeFiles/Keyboard.dir/hid.cpp.obj"
   "CMakeFiles/Keyboard.dir/hid.cpp.obj.d"
   "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj"

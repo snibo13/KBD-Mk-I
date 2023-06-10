@@ -51,7 +51,7 @@ void lcd_set_pixel(uint8_t x, uint8_t y, uint16_t color);
 void lcd_fill_screen(uint16_t color);
 void lcd_fill_screen_two(uint16_t color);
 
-void lcd_init();
+// void lcd_init();
 void lcd_flush(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *color_p);
 void lcd_update(int32_t x1, int32_t y1, int32_t x2, int32_t y2);
 void lcd_update();

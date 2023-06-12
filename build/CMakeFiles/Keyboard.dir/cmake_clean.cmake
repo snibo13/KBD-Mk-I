@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Keyboard.dir/hid.cpp.obj"
-  "CMakeFiles/Keyboard.dir/hid.cpp.obj.d"
   "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj"
   "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj.d"
   "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj"
@@ -86,8 +84,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj"
   "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj"
   "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj.d"
-  "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj"
-  "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj.d"
   "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj"
   "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj"
   "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj"
@@ -124,10 +120,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj.d"
   "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj"
   "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj.d"
-  "CMakeFiles/Keyboard.dir/main.cpp.obj"
-  "CMakeFiles/Keyboard.dir/main.cpp.obj.d"
-  "CMakeFiles/Keyboard.dir/usb_descriptors.c.obj"
-  "CMakeFiles/Keyboard.dir/usb_descriptors.c.obj.d"
+  "CMakeFiles/Keyboard.dir/old.c.obj"
+  "CMakeFiles/Keyboard.dir/old.c.obj.d"
   "Keyboard.elf"
   "Keyboard.pdb"
 )

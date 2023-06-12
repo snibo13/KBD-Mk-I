@@ -291,30 +291,6 @@ cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build.make pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build
 .PHONY : cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast
 
-hid.obj: hid.cpp.obj
-.PHONY : hid.obj
-
-# target to build an object file
-hid.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/hid.cpp.obj
-.PHONY : hid.cpp.obj
-
-hid.i: hid.cpp.i
-.PHONY : hid.i
-
-# target to preprocess a source file
-hid.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/hid.cpp.i
-.PHONY : hid.cpp.i
-
-hid.s: hid.cpp.s
-.PHONY : hid.s
-
-# target to generate assembly for a file
-hid.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/hid.cpp.s
-.PHONY : hid.cpp.s
-
 home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.obj: home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
 .PHONY : home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.obj
 
@@ -1323,30 +1299,6 @@ home/sidney/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 .PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 
-home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.obj: home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj
-.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.obj
-
-# target to build an object file
-home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj
-.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.obj
-
-home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.i: home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.i
-.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.i
-
-# target to preprocess a source file
-home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.i
-.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.i
-
-home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.s: home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.s
-.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.s
-
-# target to generate assembly for a file
-home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.s
-.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c.s
-
 home/sidney/pico/pico-sdk/src/rp2_common/pico_divider/divider.obj: home/sidney/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 .PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_divider/divider.obj
 
@@ -1747,53 +1699,29 @@ home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
-main.obj: main.cpp.obj
-.PHONY : main.obj
+old.obj: old.c.obj
+.PHONY : old.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+old.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/old.c.obj
+.PHONY : old.c.obj
 
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-usb_descriptors.obj: usb_descriptors.c.obj
-.PHONY : usb_descriptors.obj
-
-# target to build an object file
-usb_descriptors.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/usb_descriptors.c.obj
-.PHONY : usb_descriptors.c.obj
-
-usb_descriptors.i: usb_descriptors.c.i
-.PHONY : usb_descriptors.i
+old.i: old.c.i
+.PHONY : old.i
 
 # target to preprocess a source file
-usb_descriptors.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/usb_descriptors.c.i
-.PHONY : usb_descriptors.c.i
+old.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/old.c.i
+.PHONY : old.c.i
 
-usb_descriptors.s: usb_descriptors.c.s
-.PHONY : usb_descriptors.s
+old.s: old.c.s
+.PHONY : old.s
 
 # target to generate assembly for a file
-usb_descriptors.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/usb_descriptors.c.s
-.PHONY : usb_descriptors.c.s
+old.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/old.c.s
+.PHONY : old.c.s
 
 # Help Target
 help:
@@ -1817,9 +1745,6 @@ help:
 	@echo "... lvgl"
 	@echo "... lvgl_demos"
 	@echo "... lvgl_examples"
-	@echo "... hid.obj"
-	@echo "... hid.i"
-	@echo "... hid.s"
 	@echo "... home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.obj"
 	@echo "... home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i"
 	@echo "... home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s"
@@ -1946,9 +1871,6 @@ help:
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s"
-	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.obj"
-	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.i"
-	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.s"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_divider/divider.obj"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.obj"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.obj"
@@ -1999,12 +1921,9 @@ help:
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s"
-	@echo "... main.obj"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... usb_descriptors.obj"
-	@echo "... usb_descriptors.i"
-	@echo "... usb_descriptors.s"
+	@echo "... old.obj"
+	@echo "... old.i"
+	@echo "... old.s"
 .PHONY : help
 
 

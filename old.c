@@ -44,10 +44,11 @@ void led_task(void);
 #define CMD_CASET 0x2A
 #define CMD_RASET 0x2B
 #define CMD_RAMWR 0x2C
+#define ST7735_COLOR_MODE 0x3AU /* Interface pixel format: COLMOD              */
 
 // LCD dimensions
 #define LCD_WIDTH 128
-#define LCD_HEIGHT 160
+#define LCD_HEIGHT 200
 
 // Function prototypes
 void lcd_init();
@@ -56,6 +57,28 @@ void lcd_data(uint8_t data);
 void lcd_set_address(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1);
 void lcd_set_pixel(uint8_t x, uint8_t y, uint16_t color);
 void lcd_fill_screen(uint16_t color);
+
+// Colours for convenience
+#define ST7735_BLACK 0x0000   // 0b 00000 000000 00000
+#define ST7735_BLUE 0x001F    // 0b 00000 000000 11111
+#define ST7735_GREEN 0x07E0   // 0b 00000 111111 00000
+#define ST7735_RED 0xF800     // 0b 11111 000000 00000
+#define ST7735_CYAN 0x07FF    // 0b 00000 111111 11111
+#define ST7735_MAGENTA 0xF81F // 0b 11111 000000 11111
+#define ST7735_YELLOW 0xFFE0  // 0b 11111 111111 00000
+#define ST7735_WHITE 0xFFFF   // 0b 11111 111111 11111
+
+// def color565(r, g, b) : ""
+//                         "Convert red, green, blue components to a 16-bit 565 RGB value. Components
+//                         should be values 0 to 255. ""
+//                                                    "
+//                         return ((r & 0xF8) << 8) |
+//                         ((g & 0xFC) << 3) | (b >> 3)
+
+uint16_t color565(uint8_t r, uint8_t g, uint8_t b)
+{
+    return ((r & 0xF8) << 8) | ((g & 0xFC) << 3) | (b >> 3);
+}
 
 int main(void)
 {
@@ -85,13 +108,13 @@ int main(void)
     lcd_init();
 
     // Clear the screen
-    lcd_fill_screen(0x0000); // Should be black
+    lcd_fill_screen(ST7735_GREEN); // Should be black
 
     // Draw some pixels
-    lcd_set_pixel(10, 10, 0x001F);
-    lcd_set_pixel(20, 20, 0xF800);
-    lcd_set_pixel(30, 30, 0x07E0);
-    lcd_set_pixel(40, 40, 0xFFE0);
+    // lcd_set_pixel(10, 10, 0x001F);
+    // lcd_set_pixel(20, 20, 0xF800);
+    // lcd_set_pixel(30, 30, 0x07E0);
+    // lcd_set_pixel(40, 40, 0xFFE0);
 
     // lv_init();
 
@@ -136,6 +159,8 @@ void lcd_init()
     sleep_ms(150);
     lcd_command(CMD_DISPON); // Display on
     sleep_ms(150);
+    lcd_command(ST7735_COLOR_MODE);
+    lcd_data(0x05);
 }
 
 void lcd_command(uint8_t cmd)
@@ -179,6 +204,10 @@ void lcd_fill_screen(uint16_t color)
     lcd_set_address(0, 0, LCD_WIDTH - 1, LCD_HEIGHT - 1);
     for (int i = 0; i < (LCD_WIDTH * LCD_HEIGHT); i++)
     {
+        // if (i <= LCD_WIDTH)
+        // {
+        //     color = ST7735_GREEN;
+        // }
         lcd_data(color >> 8);
         lcd_data(color);
     }

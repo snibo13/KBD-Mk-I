@@ -2427,16 +2427,12 @@ CMakeFiles/Keyboard.dir/old.c.obj: ../old.c \
   ../lvgl/src/lv_conf_internal.h \
   ../lvgl/src/font/lv_symbol_def.h \
   ../lvgl/src/misc/lv_area.h \
-  ../lvgl/src/lv_conf_internal.h \
   ../lvgl/src/misc/lv_color.h \
-  ../lvgl/src/lv_conf_internal.h \
   ../lvgl/src/misc/lv_assert.h \
   ../lvgl/src/misc/lv_log.h \
   ../lvgl/src/misc/lv_mem.h \
   ../lvgl/src/misc/lv_math.h \
-  ../lvgl/src/misc/lv_types.h \
   ../lvgl/src/misc/lv_area.h \
-  ../lvgl/src/misc/lv_anim.h \
   ../lvgl/src/misc/lv_txt.h \
   ../lvgl/src/misc/lv_printf.h \
   ../lvgl/src/misc/lv_bidi.h \
@@ -2471,13 +2467,11 @@ CMakeFiles/Keyboard.dir/old.c.obj: ../old.c \
   ../lvgl/src/misc/lv_ll.h \
   ../lvgl/src/misc/lv_timer.h \
   ../lvgl/src/hal/lv_hal_indev.h \
-  ../lvgl/src/lv_conf_internal.h \
   ../lvgl/src/hal/lv_hal_tick.h \
   ../lvgl/src/core/lv_obj.h \
   ../lvgl/src/lv_conf_internal.h \
   ../lvgl/src/misc/lv_style.h \
   ../lvgl/src/misc/lv_types.h \
-  ../lvgl/src/misc/lv_area.h \
   ../lvgl/src/misc/lv_color.h \
   ../lvgl/src/misc/lv_assert.h \
   ../lvgl/src/hal/lv_hal.h \
@@ -2554,7 +2548,6 @@ CMakeFiles/Keyboard.dir/old.c.obj: ../old.c \
   ../lvgl/src/lv_conf_internal.h \
   ../lvgl/src/extra/libs/gif/lv_gif.h \
   ../lvgl/src/lvgl.h \
-  ../lvgl/lvgl.h \
   ../lvgl/src/extra/libs/qrcode/lv_qrcode.h \
   ../lvgl/src/lvgl.h \
   ../lvgl/src/extra/libs/sjpg/lv_sjpg.h \

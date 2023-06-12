@@ -50,6 +50,9 @@ void led_task(void);
 #define LCD_WIDTH 128
 #define LCD_HEIGHT 160
 
+// lv_disp_buf_t disp_buf;
+// lv_color_t color_p[LCD_WIDTH * 10];
+
 // Function prototypes
 void lcd_init();
 void lcd_command(uint8_t cmd);
@@ -120,24 +123,25 @@ int main(void)
 
     // Initialize the LCD
     lcd_init();
+    lcd_fill_screen(0); // Clear screen to white
+    lv_init();
+    hal_setup();
 
-    // Clear the screen
-    lcd_fill_screen(ST7735_GREEN); // Should be black
+    lv_obj_set_style_bg_color(lv_scr_act(), lv_color_make(255, 0, 0), LV_PART_MAIN);
 
-    // Draw some pixels
-    // lcd_set_pixel(10, 10, 0x001F);
-    // lcd_set_pixel(20, 20, 0xF800);
-    // lcd_set_pixel(30, 30, 0x07E0);
-    // lcd_set_pixel(40, 40, 0xFFE0);
-
-    // lv_init();
+    lv_obj_t *label = lv_label_create(lv_scr_act());
+    lv_label_set_text(label, "Hello world");
+    lv_obj_set_style_text_color(lv_scr_act(), lv_color_hex(0xffffff), LV_PART_MAIN);
+    lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
 
     while (1)
     {
+
         // tud_task();
         // led_task();
         // hid_task();
-        tight_loop_contents();
+        lv_task_handler();
+        // tight_loop_contents();
     }
     return 0;
 }
@@ -148,7 +152,7 @@ int main(void)
 //     blink_interval_ms = BLINK_MOUNTED;
 // }
 
-// void tud_unmount_cb(void)
+// void tud_unmount_cb(void
 // {
 //     blink_interval_ms = BLINK_UNMOUNTED;
 // }
@@ -218,10 +222,6 @@ void lcd_fill_screen(uint16_t color)
     lcd_set_address(0, 0, LCD_WIDTH - 1, LCD_HEIGHT - 1);
     for (int i = 0; i < (LCD_WIDTH * LCD_HEIGHT); i++)
     {
-        // if (i <= LCD_WIDTH)
-        // {
-        //     color = ST7735_GREEN;
-        // }
         lcd_data(color >> 8);
         lcd_data(color);
     }
@@ -232,11 +232,15 @@ void lcd_flush(lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *buf)
     /*The most simple case (but also the slowest) to put all pixels to the screen one-by-one
      *`put_px` is just an example, it needs to be implemented by you.*/
     int32_t x, y;
+    uint16_t color;
+    lcd_set_address(area->x1, area->y1, area->x2, area->y2);
     for (y = area->y1; y <= area->y2; y++)
     {
         for (x = area->x1; x <= area->x2; x++)
         {
-            lcd_set_pixel(x, y, lv_color_to16(*buf));
+            color = lv_color_to16(*buf);
+            lcd_data(color >> 8);
+            lcd_data(color);
             buf++;
         }
     }

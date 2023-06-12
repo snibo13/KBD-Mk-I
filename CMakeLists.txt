@@ -20,7 +20,6 @@ pico_stdlib
 tinyusb_device
 tinyusb_board 
 hardware_spi 
-# lvgl
-# pico_bootsel_via_double_reset
+lvgl
 )
 pico_add_extra_outputs(Keyboard)

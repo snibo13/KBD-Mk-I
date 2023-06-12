@@ -1137,6 +1137,7 @@ Keyboard.elf: CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/p
 Keyboard.elf: CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
 Keyboard.elf: CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 Keyboard.elf: CMakeFiles/Keyboard.dir/build.make
+Keyboard.elf: lib/liblvgl.a
 Keyboard.elf: pico-sdk/src/rp2_common/boot_stage2/bs2_default_padded_checksummed.S
 Keyboard.elf: CMakeFiles/Keyboard.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sidney/Keyboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Linking CXX executable Keyboard.elf"

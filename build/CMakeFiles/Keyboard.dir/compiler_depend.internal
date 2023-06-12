@@ -2483,16 +2483,12 @@ CMakeFiles/Keyboard.dir/old.c.obj
  /home/sidney/Keyboard/lvgl/src/lv_conf_internal.h
  /home/sidney/Keyboard/lvgl/src/font/lv_symbol_def.h
  /home/sidney/Keyboard/lvgl/src/misc/lv_area.h
- /home/sidney/Keyboard/lvgl/src/lv_conf_internal.h
  /home/sidney/Keyboard/lvgl/src/misc/lv_color.h
- /home/sidney/Keyboard/lvgl/src/lv_conf_internal.h
  /home/sidney/Keyboard/lvgl/src/misc/lv_assert.h
  /home/sidney/Keyboard/lvgl/src/misc/lv_log.h
  /home/sidney/Keyboard/lvgl/src/misc/lv_mem.h
  /home/sidney/Keyboard/lvgl/src/misc/lv_math.h
- /home/sidney/Keyboard/lvgl/src/misc/lv_types.h
  /home/sidney/Keyboard/lvgl/src/misc/lv_area.h
- /home/sidney/Keyboard/lvgl/src/misc/lv_anim.h
  /home/sidney/Keyboard/lvgl/src/misc/lv_txt.h
  /home/sidney/Keyboard/lvgl/src/misc/lv_printf.h
  /home/sidney/Keyboard/lvgl/src/misc/lv_bidi.h
@@ -2527,13 +2523,11 @@ CMakeFiles/Keyboard.dir/old.c.obj
  /home/sidney/Keyboard/lvgl/src/misc/lv_ll.h
  /home/sidney/Keyboard/lvgl/src/misc/lv_timer.h
  /home/sidney/Keyboard/lvgl/src/hal/lv_hal_indev.h
- /home/sidney/Keyboard/lvgl/src/lv_conf_internal.h
  /home/sidney/Keyboard/lvgl/src/hal/lv_hal_tick.h
  /home/sidney/Keyboard/lvgl/src/core/lv_obj.h
  /home/sidney/Keyboard/lvgl/src/lv_conf_internal.h
  /home/sidney/Keyboard/lvgl/src/misc/lv_style.h
  /home/sidney/Keyboard/lvgl/src/misc/lv_types.h
- /home/sidney/Keyboard/lvgl/src/misc/lv_area.h
  /home/sidney/Keyboard/lvgl/src/misc/lv_color.h
  /home/sidney/Keyboard/lvgl/src/misc/lv_assert.h
  /home/sidney/Keyboard/lvgl/src/hal/lv_hal.h
@@ -2610,7 +2604,6 @@ CMakeFiles/Keyboard.dir/old.c.obj
  /home/sidney/Keyboard/lvgl/src/lv_conf_internal.h
  /home/sidney/Keyboard/lvgl/src/extra/libs/gif/lv_gif.h
  /home/sidney/Keyboard/lvgl/src/lvgl.h
- /home/sidney/Keyboard/lvgl/lvgl.h
  /home/sidney/Keyboard/lvgl/src/extra/libs/qrcode/lv_qrcode.h
  /home/sidney/Keyboard/lvgl/src/lvgl.h
  /home/sidney/Keyboard/lvgl/src/extra/libs/sjpg/lv_sjpg.h

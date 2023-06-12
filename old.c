@@ -14,8 +14,8 @@
 
 // #define ARDUINO_ARCH_RP2040
 // #include "macros.h"
-// #include "lv_conf.h"
-// #include "lvgl.h"
+#include "lv_conf.h"
+#include "lvgl.h"
 // #include "lvgl/src/lv_conf_internal.h"
 // #include "lvgl/src/core/lv_obj.h"
 
@@ -48,7 +48,7 @@ void led_task(void);
 
 // LCD dimensions
 #define LCD_WIDTH 128
-#define LCD_HEIGHT 200
+#define LCD_HEIGHT 160
 
 // Function prototypes
 void lcd_init();
@@ -57,6 +57,8 @@ void lcd_data(uint8_t data);
 void lcd_set_address(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1);
 void lcd_set_pixel(uint8_t x, uint8_t y, uint16_t color);
 void lcd_fill_screen(uint16_t color);
+
+void lcd_flush(lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *buf);
 
 // Colours for convenience
 #define ST7735_BLACK 0x0000   // 0b 00000 000000 00000
@@ -68,16 +70,28 @@ void lcd_fill_screen(uint16_t color);
 #define ST7735_YELLOW 0xFFE0  // 0b 11111 111111 00000
 #define ST7735_WHITE 0xFFFF   // 0b 11111 111111 11111
 
-// def color565(r, g, b) : ""
-//                         "Convert red, green, blue components to a 16-bit 565 RGB value. Components
-//                         should be values 0 to 255. ""
-//                                                    "
-//                         return ((r & 0xF8) << 8) |
-//                         ((g & 0xFC) << 3) | (b >> 3)
-
 uint16_t color565(uint8_t r, uint8_t g, uint8_t b)
 {
     return ((r & 0xF8) << 8) | ((g & 0xFC) << 3) | (b >> 3);
+}
+
+void hal_setup(void)
+{
+    static lv_disp_draw_buf_t disp_buf;
+    static lv_color_t buf[LCD_WIDTH * LCD_HEIGHT];
+    lv_disp_draw_buf_init(&disp_buf, buf, NULL, LCD_WIDTH * LCD_HEIGHT);
+
+    static lv_disp_drv_t disp_drv;
+    lv_disp_drv_init(&disp_drv);
+    disp_drv.flush_cb = lcd_flush;
+    disp_drv.hor_res = LCD_WIDTH;
+    disp_drv.ver_res = LCD_HEIGHT;
+
+    disp_drv.draw_buf = &disp_buf;
+
+    static lv_disp_t *disp;
+    disp = lv_disp_drv_register(&disp_drv);
+    lv_disp_set_default(disp);
 }
 
 int main(void)
@@ -211,6 +225,25 @@ void lcd_fill_screen(uint16_t color)
         lcd_data(color >> 8);
         lcd_data(color);
     }
+}
+
+void lcd_flush(lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *buf)
+{
+    /*The most simple case (but also the slowest) to put all pixels to the screen one-by-one
+     *`put_px` is just an example, it needs to be implemented by you.*/
+    int32_t x, y;
+    for (y = area->y1; y <= area->y2; y++)
+    {
+        for (x = area->x1; x <= area->x2; x++)
+        {
+            lcd_set_pixel(x, y, lv_color_to16(*buf));
+            buf++;
+        }
+    }
+
+    /* IMPORTANT!!!
+     * Inform LVGL that you are ready with the flushing and buf is not used anymore*/
+    lv_disp_flush_ready(disp);
 }
 
 // Debugging

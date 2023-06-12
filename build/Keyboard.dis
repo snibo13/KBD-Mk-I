@@ -31,21 +31,21 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  13 .comment      00000033  00000000  00000000  00008448  2**0
                   CONTENTS, READONLY
- 14 .debug_info   000180ce  00000000  00000000  0000847b  2**0
+ 14 .debug_info   00019ef0  00000000  00000000  0000847b  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_abbrev 00004a4a  00000000  00000000  00020549  2**0
+ 15 .debug_abbrev 00004bab  00000000  00000000  0002236b  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_loc    0000fde1  00000000  00000000  00024f93  2**0
+ 16 .debug_loc    0000fe9e  00000000  00000000  00026f16  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_aranges 00000f88  00000000  00000000  00034d78  2**3
+ 17 .debug_aranges 00000f98  00000000  00000000  00036db8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_ranges 000038a0  00000000  00000000  00035d00  2**3
+ 18 .debug_ranges 000038b0  00000000  00000000  00037d50  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_line   0000ef86  00000000  00000000  000395a0  2**0
+ 19 .debug_line   0000f42e  00000000  00000000  0003b600  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_str    00003ea0  00000000  00000000  00048526  2**0
+ 20 .debug_str    0000582a  00000000  00000000  0004aa2e  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_frame  00001b20  00000000  00000000  0004c3c8  2**2
+ 21 .debug_frame  00001b60  00000000  00000000  00050258  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 /home/sidney/Keyboard/build/Keyboard.elf:     file format elf32-littlearm
@@ -453,7 +453,7 @@ Disassembly of section .text:
 1000041e <lcd_fill_screen>:
 1000041e:	b570      	push	{r4, r5, r6, lr}
 10000420:	0005      	movs	r5, r0
-10000422:	23c7      	movs	r3, #199	; 0xc7
+10000422:	239f      	movs	r3, #159	; 0x9f
 10000424:	227f      	movs	r2, #127	; 0x7f
 10000426:	2100      	movs	r1, #0
 10000428:	2000      	movs	r0, #0
@@ -465,7 +465,7 @@ Disassembly of section .text:
 10000438:	b2e8      	uxtb	r0, r5
 1000043a:	f7ff ff9d 	bl	10000378 <lcd_data>
 1000043e:	3401      	adds	r4, #1
-10000440:	23c8      	movs	r3, #200	; 0xc8
+10000440:	23a0      	movs	r3, #160	; 0xa0
 10000442:	01db      	lsls	r3, r3, #7
 10000444:	429c      	cmp	r4, r3
 10000446:	dbf4      	blt.n	10000432 <lcd_fill_screen+0x14>
@@ -8902,7 +8902,7 @@ Disassembly of section .data:
 2000014a:	f38c 8810 	msr	PRIMASK, ip
 2000014e:	0038      	movs	r0, r7
 20000150:	4641      	mov	r1, r8
-20000152:	f000 f889 	bl	20000268 <__best_effort_wfe_or_timeout_veneer>
+20000152:	f000 f881 	bl	20000258 <__best_effort_wfe_or_timeout_veneer>
 20000156:	2800      	cmp	r0, #0
 20000158:	d0e5      	beq.n	20000126 <mutex_enter_block_until+0x1e>
 2000015a:	2000      	movs	r0, #0
@@ -8911,7 +8911,7 @@ Disassembly of section .data:
 20000160:	4a0a      	ldr	r2, [pc, #40]	; (2000018c <mutex_enter_block_until+0x84>)
 20000162:	2185      	movs	r1, #133	; 0x85
 20000164:	480a      	ldr	r0, [pc, #40]	; (20000190 <mutex_enter_block_until+0x88>)
-20000166:	f000 f877 	bl	20000258 <____assert_func_veneer>
+20000166:	f000 f87f 	bl	20000268 <____assert_func_veneer>
 2000016a:	464b      	mov	r3, r9
 2000016c:	7123      	strb	r3, [r4, #4]
 2000016e:	6823      	ldr	r3, [r4, #0]
@@ -8981,7 +8981,7 @@ Disassembly of section .data:
 200001fc:	4a03      	ldr	r2, [pc, #12]	; (2000020c <mutex_exit+0x44>)
 200001fe:	21b4      	movs	r1, #180	; 0xb4
 20000200:	4803      	ldr	r0, [pc, #12]	; (20000210 <mutex_exit+0x48>)
-20000202:	f000 f829 	bl	20000258 <____assert_func_veneer>
+20000202:	f000 f831 	bl	20000268 <____assert_func_veneer>
 20000206:	46c0      	nop			; (mov r8, r8)
 20000208:	10004be4 	.word	0x10004be4
 2000020c:	10004c1c 	.word	0x10004c1c
@@ -9025,23 +9025,23 @@ Disassembly of section .data:
 20000254:	0000      	movs	r0, r0
 	...
 
-20000258 <____assert_func_veneer>:
+20000258 <__best_effort_wfe_or_timeout_veneer>:
 20000258:	b401      	push	{r0}
-2000025a:	4802      	ldr	r0, [pc, #8]	; (20000264 <____assert_func_veneer+0xc>)
+2000025a:	4802      	ldr	r0, [pc, #8]	; (20000264 <__best_effort_wfe_or_timeout_veneer+0xc>)
 2000025c:	4684      	mov	ip, r0
 2000025e:	bc01      	pop	{r0}
 20000260:	4760      	bx	ip
 20000262:	bf00      	nop
-20000264:	100020c5 	.word	0x100020c5
+20000264:	100014b5 	.word	0x100014b5
 
-20000268 <__best_effort_wfe_or_timeout_veneer>:
+20000268 <____assert_func_veneer>:
 20000268:	b401      	push	{r0}
-2000026a:	4802      	ldr	r0, [pc, #8]	; (20000274 <__best_effort_wfe_or_timeout_veneer+0xc>)
+2000026a:	4802      	ldr	r0, [pc, #8]	; (20000274 <____assert_func_veneer+0xc>)
 2000026c:	4684      	mov	ip, r0
 2000026e:	bc01      	pop	{r0}
 20000270:	4760      	bx	ip
 20000272:	bf00      	nop
-20000274:	100014b5 	.word	0x100014b5
+20000274:	100020c5 	.word	0x100020c5
 
 20000278 <striped_spin_lock_num>:
 20000278:	00000010                                ....

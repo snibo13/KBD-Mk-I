@@ -97,7 +97,7 @@ CMakeFiles/Keyboard.dir/main.cpp.obj: /home/sidney/Keyboard/main.cpp \
  /home/sidney/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
  /home/sidney/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
  /home/sidney/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
- /home/sidney/Keyboard/usb_descriptors.h /home/sidney/Keyboard/hid.h \
+ /home/sidney/Keyboard/hid.h /home/sidney/Keyboard/usb_descriptors.h \
  /home/sidney/Keyboard/universe.h /home/sidney/Keyboard/lv_conf.h \
  /home/sidney/Keyboard/lvgl/lvgl.h \
  /home/sidney/Keyboard/lvgl/src/misc/lv_log.h \
@@ -316,4 +316,4 @@ CMakeFiles/Keyboard.dir/main.cpp.obj: /home/sidney/Keyboard/main.cpp \
  /home/sidney/Keyboard/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.h \
  /home/sidney/Keyboard/lvgl/src/lvgl.h \
  /home/sidney/Keyboard/lvgl/src/extra/widgets/span/lv_span.h \
- /home/sidney/Keyboard/lvgl/src/lvgl.h
+ /home/sidney/Keyboard/lvgl/src/lvgl.h /home/sidney/Keyboard/lcd.h

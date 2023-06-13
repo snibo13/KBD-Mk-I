@@ -1699,29 +1699,53 @@ home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
-old.obj: old.c.obj
-.PHONY : old.obj
+lcd.obj: lcd.cpp.obj
+.PHONY : lcd.obj
 
 # target to build an object file
-old.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/old.c.obj
-.PHONY : old.c.obj
+lcd.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/lcd.cpp.obj
+.PHONY : lcd.cpp.obj
 
-old.i: old.c.i
-.PHONY : old.i
+lcd.i: lcd.cpp.i
+.PHONY : lcd.i
 
 # target to preprocess a source file
-old.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/old.c.i
-.PHONY : old.c.i
+lcd.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/lcd.cpp.i
+.PHONY : lcd.cpp.i
 
-old.s: old.c.s
-.PHONY : old.s
+lcd.s: lcd.cpp.s
+.PHONY : lcd.s
 
 # target to generate assembly for a file
-old.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/old.c.s
-.PHONY : old.c.s
+lcd.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/lcd.cpp.s
+.PHONY : lcd.cpp.s
+
+main.obj: main.cpp.obj
+.PHONY : main.obj
+
+# target to build an object file
+main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/main.cpp.obj
+.PHONY : main.cpp.obj
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -1921,9 +1945,12 @@ help:
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s"
-	@echo "... old.obj"
-	@echo "... old.i"
-	@echo "... old.s"
+	@echo "... lcd.obj"
+	@echo "... lcd.i"
+	@echo "... lcd.s"
+	@echo "... main.obj"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

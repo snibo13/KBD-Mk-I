@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Keyboard.dir/hid.cpp.obj"
+  "CMakeFiles/Keyboard.dir/hid.cpp.obj.d"
   "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj"
   "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj.d"
   "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj"
@@ -124,6 +126,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Keyboard.dir/lcd.cpp.obj.d"
   "CMakeFiles/Keyboard.dir/main.cpp.obj"
   "CMakeFiles/Keyboard.dir/main.cpp.obj.d"
+  "CMakeFiles/Keyboard.dir/usb_descriptors.c.obj"
+  "CMakeFiles/Keyboard.dir/usb_descriptors.c.obj.d"
   "Keyboard.elf"
   "Keyboard.pdb"
 )

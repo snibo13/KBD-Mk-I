@@ -291,6 +291,30 @@ cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build.make pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build
 .PHONY : cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast
 
+hid.obj: hid.cpp.obj
+.PHONY : hid.obj
+
+# target to build an object file
+hid.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/hid.cpp.obj
+.PHONY : hid.cpp.obj
+
+hid.i: hid.cpp.i
+.PHONY : hid.i
+
+# target to preprocess a source file
+hid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/hid.cpp.i
+.PHONY : hid.cpp.i
+
+hid.s: hid.cpp.s
+.PHONY : hid.s
+
+# target to generate assembly for a file
+hid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/hid.cpp.s
+.PHONY : hid.cpp.s
+
 home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.obj: home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
 .PHONY : home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.obj
 
@@ -1747,6 +1771,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+usb_descriptors.obj: usb_descriptors.c.obj
+.PHONY : usb_descriptors.obj
+
+# target to build an object file
+usb_descriptors.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/usb_descriptors.c.obj
+.PHONY : usb_descriptors.c.obj
+
+usb_descriptors.i: usb_descriptors.c.i
+.PHONY : usb_descriptors.i
+
+# target to preprocess a source file
+usb_descriptors.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/usb_descriptors.c.i
+.PHONY : usb_descriptors.c.i
+
+usb_descriptors.s: usb_descriptors.c.s
+.PHONY : usb_descriptors.s
+
+# target to generate assembly for a file
+usb_descriptors.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/usb_descriptors.c.s
+.PHONY : usb_descriptors.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1769,6 +1817,9 @@ help:
 	@echo "... lvgl"
 	@echo "... lvgl_demos"
 	@echo "... lvgl_examples"
+	@echo "... hid.obj"
+	@echo "... hid.i"
+	@echo "... hid.s"
 	@echo "... home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.obj"
 	@echo "... home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i"
 	@echo "... home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s"
@@ -1951,6 +2002,9 @@ help:
 	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... usb_descriptors.obj"
+	@echo "... usb_descriptors.i"
+	@echo "... usb_descriptors.s"
 .PHONY : help
 
 

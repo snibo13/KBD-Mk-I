@@ -176,8 +176,9 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj.d"
   "/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj.d"
   "/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj.d"
-  "/home/sidney/Keyboard/old.c" "CMakeFiles/Keyboard.dir/old.c.obj" "gcc" "CMakeFiles/Keyboard.dir/old.c.obj.d"
   "/home/sidney/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj.d"
+  "/home/sidney/Keyboard/lcd.cpp" "CMakeFiles/Keyboard.dir/lcd.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/lcd.cpp.obj.d"
+  "/home/sidney/Keyboard/main.cpp" "CMakeFiles/Keyboard.dir/main.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links.

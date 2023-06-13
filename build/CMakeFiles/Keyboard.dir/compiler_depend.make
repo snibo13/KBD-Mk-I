@@ -2289,7 +2289,302 @@ CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/std
   /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/clocks.h \
   /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h
 
-CMakeFiles/Keyboard.dir/old.c.obj: ../old.c \
+CMakeFiles/Keyboard.dir/lcd.cpp.obj: ../lcd.cpp \
+  ../lcd.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/assert.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
+  /usr/include/newlib/c++/10.3.1/cassert \
+  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++config.h \
+  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/os_defines.h \
+  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/cpu_defines.h \
+  /usr/include/newlib/c++/10.3.1/pstl/pstl_config.h \
+  /usr/include/newlib/assert.h \
+  /usr/include/newlib/_ansi.h \
+  /usr/include/newlib/newlib.h \
+  /usr/include/newlib/_newlib_version.h \
+  /usr/include/newlib/sys/config.h \
+  /usr/include/newlib/machine/ieeefp.h \
+  /usr/include/newlib/sys/features.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  generated/pico_base/pico/version.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  /home/sidney/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  /usr/include/newlib/sys/cdefs.h \
+  /usr/include/newlib/machine/_default_types.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/error.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/spi.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_time/include/pico/time.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/padsbank0.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/iobank0.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_bank0.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
+  ../lvgl/lvgl.h \
+  ../lvgl/src/misc/lv_log.h \
+  ../lvgl/src/lv_conf_internal.h \
+  ../lvgl/src/lv_conf_kconfig.h \
+  ../lv_conf.h \
+  ../lvgl/src/misc/lv_types.h \
+  ../lvgl/src/misc/lv_timer.h \
+  ../lvgl/src/hal/lv_hal_tick.h \
+  ../lvgl/src/lv_conf_internal.h \
+  ../lvgl/src/misc/lv_math.h \
+  ../lvgl/src/misc/lv_mem.h \
+  /usr/include/newlib/string.h \
+  /usr/include/newlib/sys/reent.h \
+  /usr/include/newlib/_ansi.h \
+  /usr/include/newlib/sys/_types.h \
+  /usr/include/newlib/machine/_types.h \
+  /usr/include/newlib/sys/lock.h \
+  /usr/include/newlib/sys/_locale.h \
+  /usr/include/newlib/strings.h \
+  /usr/include/newlib/sys/string.h \
+  ../lvgl/src/misc/lv_async.h \
+  ../lvgl/src/misc/lv_anim_timeline.h \
+  ../lvgl/src/misc/lv_anim.h \
+  ../lvgl/src/misc/lv_printf.h \
+  /usr/include/newlib/inttypes.h \
+  /usr/include/newlib/sys/_intsup.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  ../lvgl/src/hal/lv_hal.h \
+  ../lvgl/src/hal/lv_hal_disp.h \
+  ../lvgl/src/hal/lv_hal.h \
+  ../lvgl/src/draw/lv_draw.h \
+  ../lvgl/src/lv_conf_internal.h \
+  ../lvgl/src/misc/lv_style.h \
+  ../lvgl/src/font/lv_font.h \
+  ../lvgl/src/lv_conf_internal.h \
+  ../lvgl/src/font/lv_symbol_def.h \
+  ../lvgl/src/misc/lv_area.h \
+  ../lvgl/src/misc/lv_color.h \
+  ../lvgl/src/misc/lv_assert.h \
+  ../lvgl/src/misc/lv_log.h \
+  ../lvgl/src/misc/lv_mem.h \
+  ../lvgl/src/misc/lv_math.h \
+  ../lvgl/src/misc/lv_area.h \
+  ../lvgl/src/misc/lv_txt.h \
+  ../lvgl/src/misc/lv_printf.h \
+  ../lvgl/src/misc/lv_bidi.h \
+  ../lvgl/src/misc/lv_style_gen.h \
+  ../lvgl/src/misc/lv_txt.h \
+  ../lvgl/src/draw/lv_img_decoder.h \
+  ../lvgl/src/draw/lv_img_buf.h \
+  ../lvgl/src/misc/lv_color.h \
+  ../lvgl/src/misc/lv_area.h \
+  ../lvgl/src/misc/lv_fs.h \
+  ../lvgl/src/misc/lv_types.h \
+  ../lvgl/src/draw/lv_img_cache.h \
+  ../lvgl/src/draw/lv_draw_rect.h \
+  ../lvgl/src/draw/sw/lv_draw_sw_gradient.h \
+  ../lvgl/src/misc/lv_color.h \
+  ../lvgl/src/misc/lv_style.h \
+  ../lvgl/src/draw/sw/lv_draw_sw_dither.h \
+  ../lvgl/src/core/lv_obj_pos.h \
+  ../lvgl/src/misc/lv_area.h \
+  ../lvgl/src/draw/lv_draw_label.h \
+  ../lvgl/src/misc/lv_bidi.h \
+  ../lvgl/src/draw/lv_draw_img.h \
+  ../lvgl/src/draw/lv_draw_line.h \
+  ../lvgl/src/draw/lv_draw_triangle.h \
+  ../lvgl/src/draw/lv_draw_arc.h \
+  ../lvgl/src/draw/lv_draw_mask.h \
+  ../lvgl/src/misc/lv_math.h \
+  ../lvgl/src/draw/lv_draw_transform.h \
+  ../lvgl/src/draw/lv_draw_layer.h \
+  ../lvgl/src/misc/lv_color.h \
+  ../lvgl/src/misc/lv_area.h \
+  ../lvgl/src/misc/lv_ll.h \
+  ../lvgl/src/misc/lv_timer.h \
+  ../lvgl/src/hal/lv_hal_indev.h \
+  ../lvgl/src/hal/lv_hal_tick.h \
+  ../lvgl/src/core/lv_obj.h \
+  ../lvgl/src/lv_conf_internal.h \
+  ../lvgl/src/misc/lv_style.h \
+  ../lvgl/src/misc/lv_types.h \
+  ../lvgl/src/misc/lv_color.h \
+  ../lvgl/src/misc/lv_assert.h \
+  ../lvgl/src/hal/lv_hal.h \
+  ../lvgl/src/core/lv_obj_tree.h \
+  ../lvgl/src/core/lv_obj_pos.h \
+  ../lvgl/src/core/lv_obj_scroll.h \
+  ../lvgl/src/misc/lv_anim.h \
+  ../lvgl/src/core/lv_obj_style.h \
+  ../lvgl/src/misc/lv_bidi.h \
+  ../lvgl/src/core/lv_obj_style_gen.h \
+  ../lvgl/src/core/lv_obj_draw.h \
+  ../lvgl/src/draw/lv_draw.h \
+  ../lvgl/src/core/lv_obj_class.h \
+  ../lvgl/src/core/lv_event.h \
+  ../lvgl/src/core/lv_group.h \
+  ../lvgl/src/misc/lv_ll.h \
+  ../lvgl/src/core/lv_group.h \
+  ../lvgl/src/core/lv_indev.h \
+  ../lvgl/src/core/lv_obj.h \
+  ../lvgl/src/hal/lv_hal_indev.h \
+  ../lvgl/src/core/lv_refr.h \
+  ../lvgl/src/core/lv_disp.h \
+  ../lvgl/src/core/lv_theme.h \
+  ../lvgl/src/core/lv_obj.h \
+  ../lvgl/src/core/lv_theme.h \
+  ../lvgl/src/font/lv_font.h \
+  ../lvgl/src/font/lv_font_loader.h \
+  ../lvgl/src/font/lv_font_fmt_txt.h \
+  ../lvgl/src/font/lv_font.h \
+  ../lvgl/src/widgets/lv_arc.h \
+  ../lvgl/src/lv_conf_internal.h \
+  ../lvgl/src/core/lv_obj.h \
+  ../lvgl/src/widgets/lv_btn.h \
+  ../lvgl/src/widgets/lv_img.h \
+  ../lvgl/src/misc/lv_fs.h \
+  ../lvgl/src/draw/lv_draw.h \
+  ../lvgl/src/widgets/lv_label.h \
+  ../lvgl/src/font/lv_font.h \
+  ../lvgl/src/font/lv_symbol_def.h \
+  ../lvgl/src/misc/lv_txt.h \
+  ../lvgl/src/widgets/lv_line.h \
+  ../lvgl/src/widgets/lv_table.h \
+  ../lvgl/src/widgets/lv_label.h \
+  ../lvgl/src/widgets/lv_checkbox.h \
+  ../lvgl/src/widgets/lv_bar.h \
+  ../lvgl/src/misc/lv_anim.h \
+  ../lvgl/src/widgets/lv_btn.h \
+  ../lvgl/src/widgets/lv_slider.h \
+  ../lvgl/src/widgets/lv_bar.h \
+  ../lvgl/src/widgets/lv_btnmatrix.h \
+  ../lvgl/src/widgets/lv_dropdown.h \
+  ../lvgl/src/widgets/lv_label.h \
+  ../lvgl/src/widgets/lv_roller.h \
+  ../lvgl/src/widgets/lv_textarea.h \
+  ../lvgl/src/widgets/lv_canvas.h \
+  ../lvgl/src/widgets/lv_img.h \
+  ../lvgl/src/draw/lv_draw_img.h \
+  ../lvgl/src/widgets/lv_switch.h \
+  ../lvgl/src/draw/lv_draw.h \
+  ../lvgl/src/lv_api_map.h \
+  ../lvgl/lvgl.h \
+  ../lvgl/src/extra/lv_extra.h \
+  ../lvgl/src/extra/layouts/lv_layouts.h \
+  ../lvgl/src/extra/layouts/flex/lv_flex.h \
+  ../lvgl/src/core/lv_obj.h \
+  ../lvgl/src/extra/layouts/grid/lv_grid.h \
+  ../lvgl/src/core/lv_obj.h \
+  ../lvgl/src/extra/libs/lv_libs.h \
+  ../lvgl/src/extra/libs/bmp/lv_bmp.h \
+  ../lvgl/src/lv_conf_internal.h \
+  ../lvgl/src/extra/libs/fsdrv/lv_fsdrv.h \
+  ../lvgl/src/lv_conf_internal.h \
+  ../lvgl/src/extra/libs/png/lv_png.h \
+  ../lvgl/src/lv_conf_internal.h \
+  ../lvgl/src/extra/libs/gif/lv_gif.h \
+  ../lvgl/src/lvgl.h \
+  ../lvgl/src/extra/libs/qrcode/lv_qrcode.h \
+  ../lvgl/src/lvgl.h \
+  ../lvgl/src/extra/libs/sjpg/lv_sjpg.h \
+  ../lvgl/src/extra/libs/freetype/lv_freetype.h \
+  ../lvgl/src/lvgl.h \
+  ../lvgl/src/extra/libs/rlottie/lv_rlottie.h \
+  ../lvgl/src/lvgl.h \
+  ../lvgl/src/extra/libs/ffmpeg/lv_ffmpeg.h \
+  ../lvgl/src/lvgl.h \
+  ../lvgl/src/extra/others/lv_others.h \
+  ../lvgl/src/extra/others/snapshot/lv_snapshot.h \
+  ../lvgl/src/lv_conf_internal.h \
+  ../lvgl/src/core/lv_obj.h \
+  ../lvgl/src/extra/others/monkey/lv_monkey.h \
+  ../lvgl/src/lvgl.h \
+  ../lvgl/src/extra/others/gridnav/lv_gridnav.h \
+  ../lvgl/src/core/lv_obj.h \
+  ../lvgl/src/extra/others/fragment/lv_fragment.h \
+  ../lvgl/src/lv_conf_internal.h \
+  ../lvgl/src/extra/others/imgfont/lv_imgfont.h \
+  ../lvgl/src/lvgl.h \
+  ../lvgl/src/extra/others/msg/lv_msg.h \
+  ../lvgl/src/core/lv_obj.h \
+  ../lvgl/src/extra/others/ime/lv_ime_pinyin.h \
+  ../lvgl/src/lvgl.h \
+  ../lvgl/src/extra/themes/lv_themes.h \
+  ../lvgl/src/extra/themes/default/lv_theme_default.h \
+  ../lvgl/src/core/lv_obj.h \
+  ../lvgl/src/extra/themes/mono/lv_theme_mono.h \
+  ../lvgl/src/core/lv_obj.h \
+  ../lvgl/src/extra/themes/basic/lv_theme_basic.h \
+  ../lvgl/src/core/lv_obj.h \
+  ../lvgl/src/extra/widgets/lv_widgets.h \
+  ../lvgl/src/extra/widgets/animimg/lv_animimg.h \
+  ../lvgl/src/lvgl.h \
+  ../lvgl/src/extra/widgets/calendar/lv_calendar.h \
+  ../lvgl/src/widgets/lv_btnmatrix.h \
+  ../lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.h \
+  ../lvgl/src/core/lv_obj.h \
+  ../lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.h \
+  ../lvgl/src/extra/widgets/chart/lv_chart.h \
+  ../lvgl/src/lvgl.h \
+  ../lvgl/src/extra/widgets/keyboard/lv_keyboard.h \
+  ../lvgl/src/widgets/lv_btnmatrix.h \
+  ../lvgl/src/extra/widgets/list/lv_list.h \
+  ../lvgl/src/core/lv_obj.h \
+  ../lvgl/src/extra/layouts/flex/lv_flex.h \
+  ../lvgl/src/extra/widgets/menu/lv_menu.h \
+  ../lvgl/src/core/lv_obj.h \
+  ../lvgl/src/extra/widgets/msgbox/lv_msgbox.h \
+  ../lvgl/src/lvgl.h \
+  ../lvgl/src/extra/widgets/meter/lv_meter.h \
+  ../lvgl/src/lvgl.h \
+  ../lvgl/src/extra/widgets/spinbox/lv_spinbox.h \
+  ../lvgl/src/lvgl.h \
+  ../lvgl/src/extra/widgets/spinner/lv_spinner.h \
+  ../lvgl/src/lvgl.h \
+  ../lvgl/src/extra/widgets/tabview/lv_tabview.h \
+  ../lvgl/src/lvgl.h \
+  ../lvgl/src/extra/widgets/tileview/lv_tileview.h \
+  ../lvgl/src/core/lv_obj.h \
+  ../lvgl/src/extra/widgets/win/lv_win.h \
+  ../lvgl/src/lvgl.h \
+  ../lvgl/src/extra/widgets/colorwheel/lv_colorwheel.h \
+  ../lvgl/src/lvgl.h \
+  ../lvgl/src/extra/widgets/led/lv_led.h \
+  ../lvgl/src/lvgl.h \
+  ../lvgl/src/extra/widgets/imgbtn/lv_imgbtn.h \
+  ../lvgl/src/lvgl.h \
+  ../lvgl/src/extra/widgets/span/lv_span.h \
+  ../lvgl/src/lvgl.h \
+  ../lv_conf.h
+
+CMakeFiles/Keyboard.dir/main.cpp.obj: ../main.cpp \
+  /usr/include/newlib/c++/10.3.1/stdlib.h \
+  /usr/include/newlib/c++/10.3.1/cstdlib \
+  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++config.h \
+  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/os_defines.h \
+  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/cpu_defines.h \
+  /usr/include/newlib/c++/10.3.1/pstl/pstl_config.h \
   /usr/include/newlib/stdlib.h \
   /usr/include/newlib/machine/ieeefp.h \
   /usr/include/newlib/_ansi.h \
@@ -2307,6 +2602,7 @@ CMakeFiles/Keyboard.dir/old.c.obj: ../old.c \
   /usr/include/newlib/sys/cdefs.h \
   /usr/include/newlib/machine/stdlib.h \
   /usr/include/newlib/alloca.h \
+  /usr/include/newlib/c++/10.3.1/bits/std_abs.h \
   /usr/include/newlib/stdio.h \
   /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
   /usr/include/newlib/sys/types.h \
@@ -2327,6 +2623,7 @@ CMakeFiles/Keyboard.dir/old.c.obj: ../old.c \
   /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
   /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/assert.h \
   /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
+  /usr/include/newlib/c++/10.3.1/cassert \
   /usr/include/newlib/assert.h \
   /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
   generated/pico_base/pico/version.h \
@@ -2618,14 +2915,15 @@ CMakeFiles/Keyboard.dir/old.c.obj: ../old.c \
   ../lvgl/src/extra/widgets/imgbtn/lv_imgbtn.h \
   ../lvgl/src/lvgl.h \
   ../lvgl/src/extra/widgets/span/lv_span.h \
-  ../lvgl/src/lvgl.h
+  ../lvgl/src/lvgl.h \
+  ../lcd.h
 
+
+../main.cpp:
 
 ../lvgl/src/extra/widgets/imgbtn/lv_imgbtn.h:
 
 ../lvgl/src/extra/widgets/led/lv_led.h:
-
-../lvgl/src/extra/widgets/colorwheel/lv_colorwheel.h:
 
 ../lvgl/src/extra/widgets/tileview/lv_tileview.h:
 
@@ -2695,8 +2993,6 @@ CMakeFiles/Keyboard.dir/old.c.obj: ../old.c \
 
 ../lvgl/src/font/lv_font_loader.h:
 
-../lvgl/src/core/lv_disp.h:
-
 ../lvgl/src/core/lv_refr.h:
 
 ../lvgl/src/core/lv_event.h:
@@ -2754,6 +3050,10 @@ CMakeFiles/Keyboard.dir/old.c.obj: ../old.c \
 /home/sidney/pico/pico-sdk/lib/tinyusb/src/device/dcd.h:
 
 /home/sidney/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c:
+
+../usb_descriptors.h:
+
+/home/sidney/pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h:
 
 /home/sidney/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c:
 
@@ -2846,6 +3146,10 @@ CMakeFiles/Keyboard.dir/old.c.obj: ../old.c \
 /home/sidney/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c:
 
 /usr/include/newlib/strings.h:
+
+../lvgl/src/extra/widgets/colorwheel/lv_colorwheel.h:
+
+/usr/include/newlib/c++/10.3.1/cassert:
 
 ../lvgl/src/extra/widgets/spinner/lv_spinner.h:
 
@@ -2941,11 +3245,11 @@ CMakeFiles/Keyboard.dir/old.c.obj: ../old.c \
 
 /home/sidney/pico/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h:
 
+../universe.h:
+
 /home/sidney/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c:
 
 /usr/include/newlib/sys/_types.h:
-
-../universe.h:
 
 /home/sidney/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.h:
 
@@ -3041,10 +3345,6 @@ generated/pico_base/pico/version.h:
 
 /usr/include/newlib/sys/features.h:
 
-/home/sidney/pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h:
-
-../usb_descriptors.h:
-
 /home/sidney/pico/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h:
 
 ../lvgl/src/extra/others/snapshot/lv_snapshot.h:
@@ -3086,6 +3386,10 @@ generated/pico_base/pico/version.h:
 ../lvgl/src/extra/libs/fsdrv/lv_fsdrv.h:
 
 /home/sidney/pico/pico-sdk/src/common/pico_sync/lock_core.c:
+
+/home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/iobank0.h:
+
+/home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/psm.h:
 
 /home/sidney/pico/pico-sdk/src/common/pico_sync/include/pico/mutex.h:
 
@@ -3132,14 +3436,6 @@ generated/pico_base/pico/version.h:
 /usr/include/newlib/c++/10.3.1/stdlib.h:
 
 /home/sidney/pico/pico-sdk/src/common/pico_util/include/pico/util/pheap.h:
-
-../lvgl/src/widgets/lv_img.h:
-
-../lvgl/src/core/lv_obj_pos.h:
-
-../lvgl/src/draw/lv_img_buf.h:
-
-/home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/scb.h:
 
 /home/sidney/pico/pico-sdk/src/common/pico_sync/include/pico/sync.h:
 
@@ -3269,11 +3565,11 @@ generated/pico_base/pico/config_autogen.h:
 
 /home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c:
 
-/home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/iobank0.h:
+../lvgl/src/core/lv_disp.h:
 
-/home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/psm.h:
+../lcd.cpp:
 
-../old.c:
+../lcd.h:
 
 ../lvgl/lvgl.h:
 
@@ -3324,3 +3620,11 @@ generated/pico_base/pico/config_autogen.h:
 /home/sidney/pico/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom/sf_table.h:
 
 ../lvgl/src/misc/lv_bidi.h:
+
+../lvgl/src/widgets/lv_img.h:
+
+../lvgl/src/core/lv_obj_pos.h:
+
+/home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/scb.h:
+
+../lvgl/src/draw/lv_img_buf.h:

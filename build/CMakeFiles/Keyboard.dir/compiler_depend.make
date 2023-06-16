@@ -3032,7 +3032,64 @@ CMakeFiles/Keyboard.dir/main.cpp.obj: ../main.cpp \
   ../lvgl/src/lvgl.h \
   ../lvgl/src/extra/widgets/span/lv_span.h \
   ../lvgl/src/lvgl.h \
-  ../lcd.h
+  ../lcd.h \
+  ../shift_register.h
+
+CMakeFiles/Keyboard.dir/shift_register.cpp.obj: ../shift_register.cpp \
+  ../shift_register.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/assert.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
+  /usr/include/newlib/c++/10.3.1/cassert \
+  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++config.h \
+  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/os_defines.h \
+  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/cpu_defines.h \
+  /usr/include/newlib/c++/10.3.1/pstl/pstl_config.h \
+  /usr/include/newlib/assert.h \
+  /usr/include/newlib/_ansi.h \
+  /usr/include/newlib/newlib.h \
+  /usr/include/newlib/_newlib_version.h \
+  /usr/include/newlib/sys/config.h \
+  /usr/include/newlib/machine/ieeefp.h \
+  /usr/include/newlib/sys/features.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  generated/pico_base/pico/version.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  /home/sidney/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  /usr/include/newlib/sys/cdefs.h \
+  /usr/include/newlib/machine/_default_types.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/error.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_time/include/pico/time.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/padsbank0.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/iobank0.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_bank0.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h
 
 CMakeFiles/Keyboard.dir/usb_descriptors.c.obj: ../usb_descriptors.c \
   /home/sidney/pico/pico-sdk/lib/tinyusb/src/tusb.h \
@@ -3120,6 +3177,8 @@ CMakeFiles/Keyboard.dir/usb_descriptors.c.obj: ../usb_descriptors.c \
 
 
 ../usb_descriptors.c:
+
+../shift_register.h:
 
 ../main.cpp:
 
@@ -3672,6 +3731,8 @@ generated/pico_base/pico/version.h:
 /home/sidney/pico/pico-sdk/src/common/pico_util/pheap.c:
 
 /home/sidney/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c:
+
+../shift_register.cpp:
 
 ../lvgl/src/hal/lv_hal.h:
 

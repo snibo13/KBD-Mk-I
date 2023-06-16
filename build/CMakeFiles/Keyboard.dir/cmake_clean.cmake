@@ -126,6 +126,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Keyboard.dir/lcd.cpp.obj.d"
   "CMakeFiles/Keyboard.dir/main.cpp.obj"
   "CMakeFiles/Keyboard.dir/main.cpp.obj.d"
+  "CMakeFiles/Keyboard.dir/shift_register.cpp.obj"
+  "CMakeFiles/Keyboard.dir/shift_register.cpp.obj.d"
   "CMakeFiles/Keyboard.dir/usb_descriptors.c.obj"
   "CMakeFiles/Keyboard.dir/usb_descriptors.c.obj.d"
   "Keyboard.elf"

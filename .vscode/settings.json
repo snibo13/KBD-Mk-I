@@ -15,6 +15,7 @@
     },
   },
   "files.associations": {
-    "lv_conf.h": "c"
+    "lv_conf.h": "c",
+    "string": "cpp"
   },
 }

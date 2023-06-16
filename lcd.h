@@ -11,13 +11,6 @@
 #define PIN_LCD_SCK 18
 #define PIN_LCD_MOSI 19
 
-#define CS 5
-#define CLK 18
-#define MOSI 19
-#define MISO 16
-#define DC 6
-#define RST 17
-
 // LCD commands
 #define CMD_SWRESET 0x01
 #define CMD_SLPOUT 0x11

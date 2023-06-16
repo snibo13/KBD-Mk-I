@@ -181,6 +181,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/sidney/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj.d"
   "/home/sidney/Keyboard/lcd.cpp" "CMakeFiles/Keyboard.dir/lcd.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/lcd.cpp.obj.d"
   "/home/sidney/Keyboard/main.cpp" "CMakeFiles/Keyboard.dir/main.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/main.cpp.obj.d"
+  "/home/sidney/Keyboard/shift_register.cpp" "CMakeFiles/Keyboard.dir/shift_register.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/shift_register.cpp.obj.d"
   )
 
 # Targets to which this target links.

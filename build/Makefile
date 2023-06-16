@@ -1771,6 +1771,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+shift_register.obj: shift_register.cpp.obj
+.PHONY : shift_register.obj
+
+# target to build an object file
+shift_register.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/shift_register.cpp.obj
+.PHONY : shift_register.cpp.obj
+
+shift_register.i: shift_register.cpp.i
+.PHONY : shift_register.i
+
+# target to preprocess a source file
+shift_register.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/shift_register.cpp.i
+.PHONY : shift_register.cpp.i
+
+shift_register.s: shift_register.cpp.s
+.PHONY : shift_register.s
+
+# target to generate assembly for a file
+shift_register.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/shift_register.cpp.s
+.PHONY : shift_register.cpp.s
+
 usb_descriptors.obj: usb_descriptors.c.obj
 .PHONY : usb_descriptors.obj
 
@@ -2002,6 +2026,9 @@ help:
 	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... shift_register.obj"
+	@echo "... shift_register.i"
+	@echo "... shift_register.s"
 	@echo "... usb_descriptors.obj"
 	@echo "... usb_descriptors.i"
 	@echo "... usb_descriptors.s"

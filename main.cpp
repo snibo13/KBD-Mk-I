@@ -16,6 +16,7 @@
 #include "lvgl.h"
 
 #include "lcd.h"
+#include "shift_register.h"
 
 // Function prototypes
 static uint32_t blink_interval_ms = BLINK_UNMOUNTED;
@@ -25,7 +26,15 @@ uint16_t color565(uint8_t r, uint8_t g, uint8_t b)
     return ((r & 0xF8) << 8) | ((g & 0xFC) << 3) | (b >> 3);
 }
 
+// volatile uint32_t lv_tick_inc = 0;
+
+// void system_timer_callback()
+// {
+//     lv_tick_inc++;
+// }
+
 void led_task();
+static int profile_number = 3;
 int main(void)
 {
     board_init();
@@ -34,24 +43,39 @@ int main(void)
     init_lcd_hardware();
     // Initialize the LCD
     lcd_init();
-    lcd_fill_screen(0); // Clear screen to black
+    // lcd_fill_screen(0); // Clear screen to black
     lv_init();
     hal_setup();
 
     lv_obj_set_style_bg_color(lv_scr_act(), lv_color_make(0, 255, 0), LV_PART_MAIN);
 
-    lv_obj_t *label = lv_label_create(lv_scr_act());
-    lv_label_set_text(label, "Test 2");
-    lv_obj_set_style_text_color(lv_scr_act(), lv_color_hex(0xffffff), LV_PART_MAIN);
-    lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_t *profile_label = lv_label_create(lv_scr_act());
 
+    char profile_char = (char)(48 + profile_number);
+    char profile_text[10] = "Profile 1";
+    profile_text[8] = profile_char;
+
+    lv_label_set_text(profile_label, profile_text);
+    lv_obj_set_style_text_color(lv_scr_act(), lv_color_hex(0xffffff), LV_PART_MAIN);
+    lv_obj_align(profile_label, LV_ALIGN_TOP_LEFT, 0, 0);
+    volatile uint32_t prev_millis = board_millis();
     while (1)
     {
 
         // tud_task();
         led_task();
+        profile_number = 1;
+        char profile_char = (char)(48 + profile_number);
+        profile_text[8] = profile_char;
+
+        lv_label_set_text(profile_label, profile_text);
         // hid_task();
         lv_task_handler();
+        // sleep_ms(1000);
+        // system_timer_callback();
+        // uint32_t time = board_millis();
+        // lv_tick_inc(board_millis() - prev_millis);
+        // prev_millis = board_millis();
         // tight_loop_contents();
     }
     return 0;

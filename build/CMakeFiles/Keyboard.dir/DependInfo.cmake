@@ -55,6 +55,8 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
   "LIB_PICO_TIME=1"
   "LIB_PICO_UNIQUE_ID=1"
   "LIB_PICO_UTIL=1"
+  "LV_CONF_INCLUDE_SIMPLE"
+  "LV_LVGL_H_INCLUDE_SIMPLE"
   "PICO_BOARD=\"pico\""
   "PICO_BUILD=1"
   "PICO_CMAKE_BUILD_TYPE=\"Debug\""
@@ -116,6 +118,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/sidney/pico/pico-sdk/lib/tinyusb/hw"
   "/home/sidney/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/include"
   "/home/sidney/pico/pico-sdk/src/rp2_common/hardware_spi/include"
+  "../lvgl"
   )
 
 # The set of dependency files which are needed:
@@ -184,6 +187,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/sidney/Keyboard/build/lvgl/CMakeFiles/lvgl.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

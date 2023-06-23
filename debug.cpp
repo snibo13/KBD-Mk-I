@@ -1,14 +1,10 @@
 #include "stdio.h"
 #include <pico/stdlib.h>
 
-#define SHLD 22
-#define CLK 14
-#define DATA 12
+#include "shift_register.h"
 
-void initialise_register(void);
-void load_to_register(void);
-uint8_t read_register(void);
-
+static uint8_t val;
+void print_byte(uint8_t val);
 int main(void)
 {
     // Initialise stdio
@@ -17,62 +13,29 @@ int main(void)
 
     // Initial states
     initialise_register();
-    for (int j = 0; j < 20; ++j)
+    while (true)
     {
         // Read
         load_to_register();
 
         // Shift in
         read_register();
+        read_register();
+        // print_byte(val);
+
         printf("Done.\n");
         sleep_ms(1000);
     }
     printf("Done.\n");
 }
 
-void initialise_register(void)
+void print_byte(uint8_t val)
 {
-    gpio_init(SHLD);
-    gpio_init(CLK);
-    gpio_init(DATA);
-
-    gpio_set_dir(SHLD, GPIO_OUT);
-    gpio_set_dir(CLK, GPIO_OUT);
-    gpio_set_dir(DATA, GPIO_IN);
-
-    gpio_put(CLK, 1);
-    sleep_us(5);
-    gpio_put(SHLD, 1);
-    sleep_us(5);
-
-    sleep_ms(1000);
-}
-
-void load_to_register(void)
-{
-
-    gpio_put(SHLD, 0);
-    sleep_us(5);
-    gpio_put(SHLD, 1);
-    sleep_us(5);
-
-    gpio_put(CLK, 1);
-}
-
-uint8_t read_register(void)
-{
-    uint8_t value = 0;
+    printf("Printing...\n");
     uint8_t i;
-    uint8_t bit;
-
-    for (i = 0; i < 8; ++i)
+    for (uint8_t i = 0; i <= 7; i++)
     {
-        gpio_put(CLK, 1);
-        bit = gpio_get(DATA);
-        printf("%d\t", bit);
-        value |= bit << i;
-        gpio_put(CLK, 0);
+        printf("%d\t", val >> i & 1); // Magic bit shift, if you care look up the <<, >>, and & operators
     }
-
-    return value;
+    printf("\n"); // Go to the next line, do not collect $200
 }

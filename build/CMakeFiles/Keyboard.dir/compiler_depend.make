@@ -74,7 +74,8 @@ CMakeFiles/Keyboard.dir/debug.cpp.obj: ../debug.cpp \
   /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h \
   /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
   /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
-  /home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h
+  /home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+  ../shift_register.h
 
 CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj: /home/sidney/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c \
   /home/sidney/pico/pico-sdk/lib/tinyusb/src/tusb_option.h \
@@ -2867,7 +2868,81 @@ CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/
   /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/error.h \
   /home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/include/pico/unique_id.h
 
-CMakeFiles/Keyboard.dir/shift_register.cpp.obj: ../shift_register.cpp
+CMakeFiles/Keyboard.dir/shift_register.cpp.obj: ../shift_register.cpp \
+  ../shift_register.h \
+  /usr/include/newlib/stdio.h \
+  /usr/include/newlib/_ansi.h \
+  /usr/include/newlib/newlib.h \
+  /usr/include/newlib/_newlib_version.h \
+  /usr/include/newlib/sys/config.h \
+  /usr/include/newlib/machine/ieeefp.h \
+  /usr/include/newlib/sys/features.h \
+  /usr/include/newlib/sys/cdefs.h \
+  /usr/include/newlib/machine/_default_types.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  /usr/include/newlib/sys/reent.h \
+  /usr/include/newlib/_ansi.h \
+  /usr/include/newlib/sys/_types.h \
+  /usr/include/newlib/machine/_types.h \
+  /usr/include/newlib/sys/lock.h \
+  /usr/include/newlib/sys/types.h \
+  /usr/include/newlib/sys/_stdint.h \
+  /usr/include/newlib/machine/endian.h \
+  /usr/include/newlib/machine/_endian.h \
+  /usr/include/newlib/sys/select.h \
+  /usr/include/newlib/sys/_sigset.h \
+  /usr/include/newlib/sys/_timeval.h \
+  /usr/include/newlib/sys/timespec.h \
+  /usr/include/newlib/sys/_timespec.h \
+  /usr/include/newlib/sys/_pthreadtypes.h \
+  /usr/include/newlib/sys/sched.h \
+  /usr/include/newlib/machine/types.h \
+  /usr/include/newlib/sys/stdio.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/assert.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
+  /usr/include/newlib/c++/10.3.1/cassert \
+  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++config.h \
+  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/os_defines.h \
+  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/cpu_defines.h \
+  /usr/include/newlib/c++/10.3.1/pstl/pstl_config.h \
+  /usr/include/newlib/assert.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  generated/pico_base/pico/version.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  /home/sidney/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/error.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
+  /home/sidney/pico/pico-sdk/src/common/pico_time/include/pico/time.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/padsbank0.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/iobank0.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_bank0.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
+  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
+  /home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h
 
 
 /home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c:
@@ -3060,6 +3135,10 @@ generated/pico_base/pico/config_autogen.h:
 
 ../debug.cpp:
 
+/usr/include/newlib/alloca.h:
+
+/usr/include/newlib/sys/reent.h:
+
 /home/sidney/pico/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h:
 
 /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h:
@@ -3139,10 +3218,6 @@ generated/pico_base/pico/version.h:
 /home/sidney/pico/pico-sdk/src/common/pico_time/timeout_helper.c:
 
 /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h:
-
-/usr/include/newlib/sys/reent.h:
-
-/usr/include/newlib/alloca.h:
 
 /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h:
 
@@ -3331,6 +3406,8 @@ generated/pico_base/pico/version.h:
 /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/usb.h:
 
 /home/sidney/pico/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h:
+
+../shift_register.h:
 
 /usr/include/newlib/string.h:
 

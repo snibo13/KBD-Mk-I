@@ -49,8 +49,4 @@ CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio/stdi
  /home/sidney/pico/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
  /home/sidney/pico/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \
  /home/sidney/pico/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
- /home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
- /home/sidney/pico/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h \
- /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h \
- /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
- /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h
+ /home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h

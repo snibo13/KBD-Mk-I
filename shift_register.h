@@ -1,24 +1,12 @@
 #pragma once
 
+#include "stdio.h"
 #include <pico/stdlib.h>
 
-#define QH 15
-#define LD 22
-#define CLK 26
+#define SHLD 22
+#define CLK 14
+#define DATA 12
 
-#define REGISTER_CNT 1
-
-typedef struct
-{ // Register data bit field
-    bool a;
-    bool b;
-    bool c;
-    bool d;
-    bool e;
-    bool f;
-    bool g;
-    bool h;
-} shift_register_t;
-
-void init_shift_register(void);
-shift_register_t *read_shift_register(void);
+void initialise_register(void);
+void load_to_register(void);
+uint8_t read_register(void);

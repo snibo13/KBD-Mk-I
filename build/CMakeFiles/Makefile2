@@ -1508,7 +1508,6 @@ pico-sdk/tools/clean:
 
 # All Build rule for target.
 CMakeFiles/Keyboard.dir/all: CMakeFiles/ELF2UF2Build.dir/all
-CMakeFiles/Keyboard.dir/all: lvgl/CMakeFiles/lvgl.dir/all
 CMakeFiles/Keyboard.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/build
@@ -1517,7 +1516,7 @@ CMakeFiles/Keyboard.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Keyboard.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sidney/Keyboard/build/CMakeFiles 52
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sidney/Keyboard/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Keyboard.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sidney/Keyboard/build/CMakeFiles 0
 .PHONY : CMakeFiles/Keyboard.dir/rule

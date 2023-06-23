@@ -291,53 +291,29 @@ cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build.make pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build
 .PHONY : cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast
 
-hid.obj: hid.cpp.obj
-.PHONY : hid.obj
+debug.obj: debug.cpp.obj
+.PHONY : debug.obj
 
 # target to build an object file
-hid.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/hid.cpp.obj
-.PHONY : hid.cpp.obj
+debug.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/debug.cpp.obj
+.PHONY : debug.cpp.obj
 
-hid.i: hid.cpp.i
-.PHONY : hid.i
-
-# target to preprocess a source file
-hid.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/hid.cpp.i
-.PHONY : hid.cpp.i
-
-hid.s: hid.cpp.s
-.PHONY : hid.s
-
-# target to generate assembly for a file
-hid.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/hid.cpp.s
-.PHONY : hid.cpp.s
-
-home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.obj: home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
-.PHONY : home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.obj
-
-# target to build an object file
-home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
-.PHONY : home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
-
-home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i: home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
-.PHONY : home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i
+debug.i: debug.cpp.i
+.PHONY : debug.i
 
 # target to preprocess a source file
-home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
-.PHONY : home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
+debug.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/debug.cpp.i
+.PHONY : debug.cpp.i
 
-home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s: home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
-.PHONY : home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s
+debug.s: debug.cpp.s
+.PHONY : debug.s
 
 # target to generate assembly for a file
-home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
-.PHONY : home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
+debug.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/debug.cpp.s
+.PHONY : debug.cpp.s
 
 home/sidney/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: home/sidney/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 .PHONY : home/sidney/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj
@@ -1043,6 +1019,30 @@ home/sidney/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 .PHONY : home/sidney/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 
+home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj: home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj
+
+# target to build an object file
+home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+
+home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.i: home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.i
+
+# target to preprocess a source file
+home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+
+home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.s: home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.s
+
+# target to generate assembly for a file
+home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
+
 home/sidney/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: home/sidney/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 .PHONY : home/sidney/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj
 
@@ -1675,29 +1675,77 @@ home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
-home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj: home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj
+home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj: home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj
 
 # target to build an object file
-home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
 
-home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i: home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
-.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i
+home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i: home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i
 
 # target to preprocess a source file
-home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
-.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
+home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
 
-home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s: home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
-.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s
+home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s: home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s
 
 # target to generate assembly for a file
-home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
-.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
+home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+
+home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj: home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj
+
+# target to build an object file
+home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+
+home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i: home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i
+
+# target to preprocess a source file
+home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+
+home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s: home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s
+
+# target to generate assembly for a file
+home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+
+home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj: home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj
+
+# target to build an object file
+home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+
+home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i: home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i
+
+# target to preprocess a source file
+home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+
+home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s: home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s
+
+# target to generate assembly for a file
+home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 
 home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj: home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 .PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj
@@ -1723,53 +1771,29 @@ home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
-lcd.obj: lcd.cpp.obj
-.PHONY : lcd.obj
+home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj: home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj
 
 # target to build an object file
-lcd.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/lcd.cpp.obj
-.PHONY : lcd.cpp.obj
+home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
 
-lcd.i: lcd.cpp.i
-.PHONY : lcd.i
-
-# target to preprocess a source file
-lcd.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/lcd.cpp.i
-.PHONY : lcd.cpp.i
-
-lcd.s: lcd.cpp.s
-.PHONY : lcd.s
-
-# target to generate assembly for a file
-lcd.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/lcd.cpp.s
-.PHONY : lcd.cpp.s
-
-main.obj: main.cpp.obj
-.PHONY : main.obj
-
-# target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/main.cpp.obj
-.PHONY : main.cpp.obj
-
-main.i: main.cpp.i
-.PHONY : main.i
+home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i: home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/main.cpp.i
-.PHONY : main.cpp.i
+home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s: home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/main.cpp.s
-.PHONY : main.cpp.s
+home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
+.PHONY : home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 
 shift_register.obj: shift_register.cpp.obj
 .PHONY : shift_register.obj
@@ -1795,30 +1819,6 @@ shift_register.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/shift_register.cpp.s
 .PHONY : shift_register.cpp.s
 
-usb_descriptors.obj: usb_descriptors.c.obj
-.PHONY : usb_descriptors.obj
-
-# target to build an object file
-usb_descriptors.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/usb_descriptors.c.obj
-.PHONY : usb_descriptors.c.obj
-
-usb_descriptors.i: usb_descriptors.c.i
-.PHONY : usb_descriptors.i
-
-# target to preprocess a source file
-usb_descriptors.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/usb_descriptors.c.i
-.PHONY : usb_descriptors.c.i
-
-usb_descriptors.s: usb_descriptors.c.s
-.PHONY : usb_descriptors.s
-
-# target to generate assembly for a file
-usb_descriptors.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Keyboard.dir/build.make CMakeFiles/Keyboard.dir/usb_descriptors.c.s
-.PHONY : usb_descriptors.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1841,12 +1841,9 @@ help:
 	@echo "... lvgl"
 	@echo "... lvgl_demos"
 	@echo "... lvgl_examples"
-	@echo "... hid.obj"
-	@echo "... hid.i"
-	@echo "... hid.s"
-	@echo "... home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.obj"
-	@echo "... home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i"
-	@echo "... home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s"
+	@echo "... debug.obj"
+	@echo "... debug.i"
+	@echo "... debug.s"
 	@echo "... home/sidney/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj"
 	@echo "... home/sidney/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
 	@echo "... home/sidney/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"
@@ -1935,6 +1932,9 @@ help:
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj"
+	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj"
+	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.i"
+	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.s"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s"
@@ -2014,24 +2014,24 @@ help:
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.obj"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s"
-	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj"
-	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i"
-	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s"
+	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj"
+	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i"
+	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s"
+	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj"
+	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i"
+	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s"
+	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj"
+	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i"
+	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i"
 	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s"
-	@echo "... lcd.obj"
-	@echo "... lcd.i"
-	@echo "... lcd.s"
-	@echo "... main.obj"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj"
+	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i"
+	@echo "... home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s"
 	@echo "... shift_register.obj"
 	@echo "... shift_register.i"
 	@echo "... shift_register.s"
-	@echo "... usb_descriptors.obj"
-	@echo "... usb_descriptors.i"
-	@echo "... usb_descriptors.s"
 .PHONY : help
 
 

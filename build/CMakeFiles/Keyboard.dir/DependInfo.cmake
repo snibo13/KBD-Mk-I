@@ -46,18 +46,15 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
   "LIB_PICO_RUNTIME=1"
   "LIB_PICO_STANDARD_LINK=1"
   "LIB_PICO_STDIO=1"
-  "LIB_PICO_STDIO_UART=1"
+  "LIB_PICO_STDIO_USB=1"
   "LIB_PICO_STDLIB=1"
   "LIB_PICO_SYNC=1"
   "LIB_PICO_SYNC_CRITICAL_SECTION=1"
   "LIB_PICO_SYNC_MUTEX=1"
   "LIB_PICO_SYNC_SEM=1"
   "LIB_PICO_TIME=1"
+  "LIB_PICO_UNIQUE_ID=1"
   "LIB_PICO_UTIL=1"
-  "LIB_TINYUSB_BOARD=1"
-  "LIB_TINYUSB_DEVICE=1"
-  "LV_CONF_INCLUDE_SIMPLE"
-  "LV_LVGL_H_INCLUDE_SIMPLE"
   "PICO_BOARD=\"pico\""
   "PICO_BUILD=1"
   "PICO_CMAKE_BUILD_TYPE=\"Debug\""
@@ -73,7 +70,6 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
-  "../"
   "/home/sidney/pico/pico-sdk/src/common/pico_stdlib/include"
   "/home/sidney/pico/pico-sdk/src/rp2_common/hardware_gpio/include"
   "/home/sidney/pico/pico-sdk/src/common/pico_base/include"
@@ -108,7 +104,10 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/sidney/pico/pico-sdk/src/rp2_common/pico_bootrom/include"
   "/home/sidney/pico/pico-sdk/src/common/pico_binary_info/include"
   "/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio/include"
-  "/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include"
+  "/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include"
+  "/home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/include"
+  "/home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/include"
+  "/home/sidney/pico/pico-sdk/src/common/pico_usb_reset_interface/include"
   "/home/sidney/pico/pico-sdk/src/rp2_common/pico_int64_ops/include"
   "/home/sidney/pico/pico-sdk/src/rp2_common/pico_mem_ops/include"
   "/home/sidney/pico/pico-sdk/src/rp2_common/boot_stage2/include"
@@ -117,12 +116,10 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/sidney/pico/pico-sdk/lib/tinyusb/hw"
   "/home/sidney/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/include"
   "/home/sidney/pico/pico-sdk/src/rp2_common/hardware_spi/include"
-  "../lvgl"
   )
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj.d"
   "/home/sidney/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj.d"
   "/home/sidney/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj.d"
   "/home/sidney/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj.d"
@@ -152,6 +149,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/sidney/pico/pico-sdk/src/common/pico_util/queue.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/common/pico_util/queue.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/common/pico_util/queue.c.obj.d"
   "/home/sidney/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj.d"
   "/home/sidney/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj.d"
+  "/home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj.d"
   "/home/sidney/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj.d"
   "/home/sidney/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj.d"
   "/home/sidney/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj.d"
@@ -174,19 +172,18 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/sidney/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj.d"
   "/home/sidney/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj.d"
   "/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj.d"
-  "/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj.d"
+  "/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj.d"
+  "/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj.d"
+  "/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj.d"
   "/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj.d"
-  "/home/sidney/Keyboard/usb_descriptors.c" "CMakeFiles/Keyboard.dir/usb_descriptors.c.obj" "gcc" "CMakeFiles/Keyboard.dir/usb_descriptors.c.obj.d"
-  "/home/sidney/Keyboard/hid.cpp" "CMakeFiles/Keyboard.dir/hid.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/hid.cpp.obj.d"
+  "/home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj.d"
+  "/home/sidney/Keyboard/debug.cpp" "CMakeFiles/Keyboard.dir/debug.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/debug.cpp.obj.d"
   "/home/sidney/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj.d"
-  "/home/sidney/Keyboard/lcd.cpp" "CMakeFiles/Keyboard.dir/lcd.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/lcd.cpp.obj.d"
-  "/home/sidney/Keyboard/main.cpp" "CMakeFiles/Keyboard.dir/main.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/main.cpp.obj.d"
   "/home/sidney/Keyboard/shift_register.cpp" "CMakeFiles/Keyboard.dir/shift_register.cpp.obj" "gcc" "CMakeFiles/Keyboard.dir/shift_register.cpp.obj.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/sidney/Keyboard/build/lvgl/CMakeFiles/lvgl.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -2,8 +2,9 @@ CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/src/portable/raspb
  /home/sidney/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c \
  /home/sidney/pico/pico-sdk/lib/tinyusb/src/tusb_option.h \
  /home/sidney/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
- /home/sidney/Keyboard/tusb_config.h \
- /home/sidney/pico/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+ /home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
+ /home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+ /home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico.h \
  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/assert.h \
@@ -27,6 +28,7 @@ CMakeFiles/Keyboard.dir/home/sidney/pico/pico-sdk/lib/tinyusb/src/portable/raspb
  /usr/include/newlib/machine/_default_types.h \
  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
  /home/sidney/pico/pico-sdk/src/common/pico_base/include/pico/error.h \
+ /home/sidney/pico/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
  /home/sidney/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.h \
  /home/sidney/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
  /usr/include/newlib/string.h /usr/include/newlib/sys/reent.h \

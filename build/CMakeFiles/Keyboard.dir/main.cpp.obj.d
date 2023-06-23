@@ -63,7 +63,7 @@ CMakeFiles/Keyboard.dir/main.cpp.obj: /home/sidney/Keyboard/main.cpp \
  /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h \
  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
- /home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
+ /home/sidney/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
  /home/sidney/pico/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h \
  /home/sidney/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/spi.h \
  /home/sidney/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h \

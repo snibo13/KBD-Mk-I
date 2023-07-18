@@ -1,3 +1,0 @@
-/home/sidney/Documents/Code/KBD-Mk-I/build/pioasm/CMakeFiles/pioasm.dir
-/home/sidney/Documents/Code/KBD-Mk-I/build/pioasm/CMakeFiles/edit_cache.dir
-/home/sidney/Documents/Code/KBD-Mk-I/build/pioasm/CMakeFiles/rebuild_cache.dir

@@ -47,3 +47,15 @@ uint8_t read_register(void)
 
     return value;
 }
+
+void register_task()
+{
+    // Polls and stores current register state
+    load_to_register();
+    uint8_t register_state = 0;
+    for (uint8_t register_num = NUM_REGISTERS; register_num > 0; register_num--)
+    {
+        uint8_t current_register = read_register();
+        keyboard_state[register_num] = current_register;
+    }
+}

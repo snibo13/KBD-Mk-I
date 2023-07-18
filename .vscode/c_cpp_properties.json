@@ -4,6 +4,10 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
+<<<<<<< Updated upstream
+=======
+                "/home/sidney/Documents/Code/utils",
+>>>>>>> Stashed changes
                 "/home/sidney/Documents/Code/utils/**"
             ],
             "defines": [],

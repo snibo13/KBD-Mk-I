@@ -5,6 +5,11 @@
 #include "lvgl.h"
 #include "lv_conf.h"
 
+uint16_t color565(uint8_t r, uint8_t g, uint8_t b)
+{
+    return ((r & 0xF8) << 8) | ((g & 0xFC) << 3) | (b >> 3);
+}
+
 void lcd_command(uint8_t cmd)
 {
     gpio_put(PIN_LCD_DC, 0); // Set DC low for command mode
@@ -81,6 +86,7 @@ void init_lcd_hardware(void)
 
 void lcd_init()
 {
+    init_lcd_hardware();
     // Send initialization commands to the LCD
     lcd_command(CMD_SWRESET); // Software reset
     sleep_ms(150);

@@ -43,3 +43,4 @@ void lcd_set_address(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1);
 void lcd_set_pixel(uint8_t x, uint8_t y, uint16_t color);
 void lcd_fill_screen(uint16_t color);
 void lcd_flush(lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *buf);
+uint16_t color565(uint8_t r, uint8_t g, uint8_t b);

@@ -20,7 +20,6 @@ int main(void)
 
         // Shift in
         read_register();
-        read_register();
         // print_byte(val);
 
         printf("Done.\n");

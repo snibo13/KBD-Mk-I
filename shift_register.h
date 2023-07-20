@@ -13,5 +13,5 @@ static uint8_t keyboard_state[NUM_REGISTERS];
 
 void initialise_register(void);
 void load_to_register(void);
-uint8_t read_register(void);
+uint16_t read_register(void);
 void register_task(void);

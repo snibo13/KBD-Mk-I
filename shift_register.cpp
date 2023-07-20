@@ -11,9 +11,9 @@ void initialise_register(void)
     gpio_set_dir(DATA, GPIO_IN);
 
     gpio_put(CLK, 1);
-    sleep_us(5);
+    // sleep_us(3);
     gpio_put(SHLD, 1);
-    sleep_us(5);
+    // sleep_us(3);
 
     sleep_ms(1000);
 }
@@ -22,27 +22,30 @@ void load_to_register(void)
 {
 
     gpio_put(SHLD, 0);
-    sleep_us(50);
+    // sleep_us(3);
     gpio_put(SHLD, 1);
-    sleep_us(50);
+    // sleep_us(3);
 
     gpio_put(CLK, 1);
-    sleep_us(50);
+    // sleep_us(3);
 }
 
-uint8_t read_register(void)
+uint16_t read_register(void)
 {
-    uint8_t value = 0;
-    uint8_t i, bit;
-    for (i = 0; i < 8; ++i)
+    uint16_t value = 0;
+    uint8_t i, bit, r;
+    for (r = 0; r < NUM_REGISTERS; r++)
     {
-        gpio_put(CLK, 1);
-        bit = gpio_get(DATA);
-        printf("%d\t", bit);
-        sleep_us(50);
-        value |= bit << i;
-        gpio_put(CLK, 0);
-        sleep_us(50);
+        for (i = 0; i < 8; ++i)
+        {
+            bit = gpio_get(DATA);
+            printf("%d\t", bit);
+            value |= bit << i;
+            gpio_put(CLK, 0);
+            sleep_us(1);
+            gpio_put(CLK, 1);
+            sleep_us(1);
+        }
     }
 
     return value;

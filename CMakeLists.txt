@@ -12,24 +12,24 @@ pico_sdk_init()
 
 add_executable(Keyboard 
 main.cpp 
-# hid.cpp
+hid.cpp
 keyboard.cpp 
 lcd.cpp 
-# usb_descriptors.c 
+usb_descriptors.c 
 shift_register.cpp)
 target_include_directories(Keyboard PRIVATE 
-# ${CMAKE_CURRENT_SOURCE_DIR}/ 
-# ${CMAKE_CURRENT_SOURCE_DIR}/lvgl/
+${CMAKE_CURRENT_SOURCE_DIR}/ 
+${CMAKE_CURRENT_SOURCE_DIR}/lvgl/
 )
 
 target_link_libraries(Keyboard PRIVATE 
 pico_stdlib 
-# tinyusb_device
-# tinyusb_board 
+tinyusb_device
+tinyusb_board 
 hardware_spi  
 lvgl
 )
 # enable usb output, disable uart output
-pico_enable_stdio_usb(Keyboard 1)
-pico_enable_stdio_uart(Keyboard 0)
+# pico_enable_stdio_usb(Keyboard 1)
+# pico_enable_stdio_uart(Keyboard 0)
 pico_add_extra_outputs(Keyboard)

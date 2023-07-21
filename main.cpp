@@ -7,6 +7,9 @@
 
 #include "bsp/board.h"
 
+#include "usb_descriptors.h"
+#include "tusb.h"
+
 #include "lv_conf.h"
 #include "lvgl.h"
 
@@ -19,9 +22,9 @@
 static int profile_number = 3;
 int main(void)
 {
-    // board_init();
+    board_init();
     stdio_init_all();
-    // tusb_init();
+    tusb_init();
 
     // Initialize the LCD
     // lcd_init();
@@ -38,15 +41,10 @@ int main(void)
     while (true)
     {
         // printf("Loop\n");
-        // tud_task();
-        // led_blinking_task();
+        tud_task();
+        led_blinking_task();
 
-        register_task();
         keyboard_task();
-        sleep_ms(500);
-        // hid_task();
-        // lv_label_set_text(reg_label, bin_reg);
-        // lv_task_handler();
     }
     return 0;
 }

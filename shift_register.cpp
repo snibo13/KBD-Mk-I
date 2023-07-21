@@ -52,6 +52,6 @@ void read_register(uint8_t *value)
 void register_task()
 {
     // Polls and stores current register state
-    load_to_register();
+    // load_to_register();
     // read_register();
 }

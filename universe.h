@@ -1,8 +1,12 @@
+#include <inttypes.h>
+
 enum
 {
-    BLINK_UNMOUNTED = 250,
-    BLINK_MOUNTED = 1000,
-    BLINK_SUSPENDED = 1000,
+    BLINK_UNMOUNTED = 1000,
+    BLINK_MOUNTED = 100,
+    BLINK_SUSPENDED = 2000
 };
-
-#define CFG_TUD_HID
+// namespace shared
+// {
+//     uint32_t blink_interval_ms;
+// }

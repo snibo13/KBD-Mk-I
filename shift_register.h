@@ -9,9 +9,9 @@
 
 #define NUM_REGISTERS 2
 
-static uint8_t keyboard_state[NUM_REGISTERS];
+// static uint16_t keyboard_state;
 
 void initialise_register(void);
 void load_to_register(void);
-uint16_t read_register(void);
+void read_register(uint8_t *);
 void register_task(void);

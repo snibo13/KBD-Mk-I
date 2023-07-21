@@ -30,35 +30,28 @@ void load_to_register(void)
     // sleep_us(3);
 }
 
-uint16_t read_register(void)
+void read_register(uint8_t *value)
 {
-    uint16_t value = 0;
     uint8_t i, bit, r;
     for (r = 0; r < NUM_REGISTERS; r++)
     {
         for (i = 0; i < 8; ++i)
         {
             bit = gpio_get(DATA);
-            printf("%d\t", bit);
-            value |= bit << i;
+            // printf("%d\t", bit);
+            value[r] |= bit << i;
             gpio_put(CLK, 0);
             sleep_us(1);
             gpio_put(CLK, 1);
             sleep_us(1);
         }
     }
-
-    return value;
+    // printf("\n");
 }
 
 void register_task()
 {
     // Polls and stores current register state
     load_to_register();
-    uint8_t register_state = 0;
-    for (uint8_t register_num = NUM_REGISTERS; register_num > 0; register_num--)
-    {
-        uint8_t current_register = read_register();
-        keyboard_state[register_num] = current_register;
-    }
+    // read_register();
 }

@@ -45,6 +45,10 @@ int main(void)
         led_blinking_task();
 
         keyboard_task();
+        // hid_task();
+        // sleep_ms(500);
+        // lv_label_set_text(reg_label, bin_reg);
+        // lv_task_handler();
     }
     return 0;
 }

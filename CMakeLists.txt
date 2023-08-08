@@ -16,10 +16,13 @@ hid.cpp
 keyboard.cpp 
 lcd.cpp 
 usb_descriptors.c 
-shift_register.cpp)
+shift_register.cpp
+interface.cpp)
 target_include_directories(Keyboard PRIVATE 
 ${CMAKE_CURRENT_SOURCE_DIR}/ 
 ${CMAKE_CURRENT_SOURCE_DIR}/lvgl/
+${CMAKE_CURRENT_SOURCE_DIR}/messages/
+/home/sidney/Documents/Code/utils/nanopb-0.4.7-linux-x86/
 )
 
 target_link_libraries(Keyboard PRIVATE 

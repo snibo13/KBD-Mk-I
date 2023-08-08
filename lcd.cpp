@@ -39,6 +39,109 @@ void lcd_set_address(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1)
     lcd_command(CMD_RAMWR); // Memory write
 }
 
+void ST7735_Init_Command1(void)
+{
+    lcd_command(ST7735_SWRESET); //  1: Software reset
+    sleep_ms(150);
+    lcd_command(ST7735_SLPOUT); //  2: Out of sleep mode
+    sleep_ms(500);
+    lcd_command(ST7735_FRMCTR1); //  3: Frame rate ctrl - normal mode
+    lcd_data(0x01);              //     Rate = fosc/(1x2+40) * (LINE+2C+2D)
+    lcd_data(0x2C);
+    lcd_data(0x2D);
+    lcd_command(ST7735_FRMCTR2); //  4: Frame rate control - idle mode
+    lcd_data(0x01);              //  Rate = fosc/(1x2+40) * (LINE+2C+2D)
+    lcd_data(0x2C);
+    lcd_data(0x2D);
+    lcd_command(ST7735_FRMCTR3); //  5: Frame rate ctrl - partial mode
+    lcd_data(0x01);              //     Dot inversion mode
+    lcd_data(0x2C);
+    lcd_data(0x2D);
+    lcd_data(0x01); //     Line inversion mode
+    lcd_data(0x2C);
+    lcd_data(0x2D);
+    lcd_command(ST7735_INVCTR); //  6: Display inversion ctrl
+    lcd_data(0x07);             //     No inversion
+    lcd_command(ST7735_PWCTR1); //  7: Power control
+    lcd_data(0xA2);
+    lcd_data(0x02);             //     -4.6V
+    lcd_data(0x84);             //     AUTO mode
+    lcd_command(ST7735_PWCTR2); //  8: Power control
+    lcd_data(0xC5);             //     VGH25 = 2.4C VGSEL = -10 VGH = 3 * AVDD
+    lcd_command(ST7735_PWCTR3); //  9: Power control
+    lcd_data(0x0A);             //     Opamp current small
+    lcd_data(0x00);             //     Boost frequency
+    lcd_command(ST7735_PWCTR4); // 10: Power control
+    lcd_data(0x8A);             //     BCLK/2, Opamp current small & Medium low
+    lcd_data(0x2A);
+    lcd_command(ST7735_PWCTR5); // 11: Power control
+    lcd_data(0x8A);
+    lcd_data(0xEE);
+    lcd_command(ST7735_VMCTR1); // 12: Power control
+    lcd_data(0x0E);
+    lcd_command(ST7735_INVOFF); // 13: Don't invert display
+    lcd_command(ST7735_MADCTL); // 14: Memory access control (directions)
+    lcd_data(ST7735_ROTATION);  //     row addr/col addr, bottom to top refresh
+    lcd_command(ST7735_COLMOD); // 15: set color mode
+    lcd_data(0x05);             //     16-bit color
+}
+
+void ST7735_Init_Command2(void)
+{
+    lcd_command(ST7735_CASET); //  1: Column addr set
+    lcd_data(0x00);            //     XSTART = 0
+    lcd_data(0x00);
+    lcd_data(0x00); //     XEND = 127
+    lcd_data(0x7F);
+    lcd_command(ST7735_RASET); //  2: Row addr set
+    lcd_data(0x00);            //     XSTART = 0
+    lcd_data(0x00);
+    lcd_data(0x00); //     XEND = 127
+    lcd_data(0x7F);
+}
+
+void ST7735_Init_Command3(void)
+{
+    lcd_command(ST7735_GMCTRP1); //  1: Magical unicorn dust
+    lcd_data(0x02);
+    lcd_data(0x1C);
+    lcd_data(0x07);
+    lcd_data(0x12);
+    lcd_data(0x37);
+    lcd_data(0x32);
+    lcd_data(0x29);
+    lcd_data(0x2D);
+    lcd_data(0x29);
+    lcd_data(0x25);
+    lcd_data(0x2B);
+    lcd_data(0x39);
+    lcd_data(0x00);
+    lcd_data(0x01);
+    lcd_data(0x03);
+    lcd_data(0x10);
+    lcd_command(ST7735_GMCTRN1); //  2: Sparkles and rainbows
+    lcd_data(0x03);
+    lcd_data(0x1D);
+    lcd_data(0x07);
+    lcd_data(0x06);
+    lcd_data(0x2E);
+    lcd_data(0x2C);
+    lcd_data(0x29);
+    lcd_data(0x2D);
+    lcd_data(0x2E);
+    lcd_data(0x2E);
+    lcd_data(0x37);
+    lcd_data(0x3F);
+    lcd_data(0x00);
+    lcd_data(0x00);
+    lcd_data(0x02);
+    lcd_data(0x10);
+    lcd_command(ST7735_NORON);
+    sleep_ms(10);
+    lcd_command(ST7735_DISPON);
+    sleep_ms(100);
+}
+
 void lcd_flush(lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *buf)
 {
     /*The most simple case (but also the slowest) to put all pixels to the screen one-by-one
@@ -87,15 +190,18 @@ void init_lcd_hardware(void)
 void lcd_init()
 {
     init_lcd_hardware();
-    // Send initialization commands to the LCD
-    lcd_command(CMD_SWRESET); // Software reset
-    sleep_ms(150);
-    lcd_command(CMD_SLPOUT); // Sleep out
-    sleep_ms(150);
-    lcd_command(CMD_DISPON); // Display on
-    sleep_ms(150);
-    lcd_command(ST7735_COLOR_MODE);
-    lcd_data(0x05);
+    ST7735_Init_Command1();
+    ST7735_Init_Command2();
+    ST7735_Init_Command3();
+    // // Send initialization commands to the LCD
+    // lcd_command(CMD_SWRESET); // Software reset
+    // sleep_ms(150);
+    // lcd_command(CMD_SLPOUT); // Sleep out
+    // sleep_ms(150);
+    // lcd_command(CMD_DISPON); // Display on
+    // sleep_ms(150);
+    // lcd_command(ST7735_COLOR_MODE);
+    // lcd_data(0x05);
 }
 
 void lcd_set_pixel(uint8_t x, uint8_t y, uint16_t color)

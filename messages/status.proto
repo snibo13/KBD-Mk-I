@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package KBD;
+
+message Test {
+    string data = 1;
+}

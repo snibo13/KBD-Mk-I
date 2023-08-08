@@ -19,6 +19,8 @@
 #include "keyboard.h"
 #include "hid.h"
 
+#include "interface.h"
+
 static int profile_number = 3;
 int main(void)
 {
@@ -27,24 +29,21 @@ int main(void)
     tusb_init();
 
     // Initialize the LCD
-    // lcd_init();
-    // lv_init();
-    // hal_setup();
+    lcd_init();
+    lv_init();
+    hal_setup();
 
     // lv_obj_set_style_bg_color(lv_scr_act(), lv_color_make(0, 255, 0), LV_PART_MAIN);
-
-    // lv_obj_t *reg_label = lv_label_create(lv_scr_act());
-    // lv_obj_align(reg_label, LV_ALIGN_CENTER, 0, 0);
-
+    lcd_fill_screen(ST7735_RED);
     initialise_register();
 
     while (true)
     {
-        // printf("Loop\n");
         tud_task();
         led_blinking_task();
 
         keyboard_task();
+        interface_task();
         // hid_task();
         // sleep_ms(500);
         // lv_label_set_text(reg_label, bin_reg);

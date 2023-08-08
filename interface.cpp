@@ -9,6 +9,7 @@ void interface_task()
     if (n > 0)
     {
         update = n;
+        interface_string = const_cast<char *>(data_received);
     }
     else
     {

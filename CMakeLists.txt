@@ -34,5 +34,5 @@ lvgl
 )
 # enable usb output, disable uart output
 pico_enable_stdio_usb(Keyboard 1)
-# pico_enable_stdio_uart(Keyboard 0)
+pico_enable_stdio_uart(Keyboard 0)
 pico_add_extra_outputs(Keyboard)
